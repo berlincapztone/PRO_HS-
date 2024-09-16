@@ -154,79 +154,62 @@
             border-radius: 0.5rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            width: 300px; /* Fixed width for card */
-            height: 22rem; /* Fixed height for card */
+            width: 100%;
+            max-width: 350px; /* Larger card size */
+            height: 25rem; /* Increased height */
             transition: transform 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
         }
-    
+        
         .blog-card img {
             width: 100%;
-            height: 10rem; /* Fixed height for images */
-            object-fit: cover;
+            height: 12rem; /* Adjust image height */
+            object-fit: cover; /* Ensure the image covers the area */
         }
-    
-        .blog-card h1 {
-            margin-bottom: 0.5rem;
-            font-size: 1.125rem;
-        }
-    
-        .blog-card p {
-            margin-bottom: 0.5rem;
-            color: #6b7280;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-        }
-    
+        
         .learn-more-btn {
-            width: 80px; /* Fixed width */
-            height: 30px; /* Fixed height */
-            padding: 0; /* Remove padding to fit dimensions */
-            font-size: 0.75rem; /* Font size */
-            border: 2px solid #FFB81C; /* Border color */
-            border-radius: 0.25rem; /* Border radius for rounded corners */
-            background-color: #FFB81C; /* Background color */
-            color: #333; /* Text color */
-            text-align: center; /* Center text horizontally */
-            line-height: 30px; /* Center text vertically */
-            text-decoration: none; /* Remove underline */
-            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+            width: 80px;
+            height: 30px;
+            padding: 0;
+            font-size: 0.75rem;
+            border: 2px solid #FFB81C;
+            border-radius: 0.25rem;
+            background-color: #FFB81C;
+            color: #333;
+            text-align: center;
+            line-height: 30px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         
         .learn-more-btn:hover {
-            background-color: #F9A825; /* Darker background on hover */
-            color: #fff; /* Change text color on hover */
+            background-color: #F9A825;
+            color: #fff;
         }
         
-        
-    
-        @media (max-width: 1024px) {
-            .blog-card {
-                width: 90%;
-            }
-        }
-    
+        /* For tablets and smaller screens */
         @media (max-width: 768px) {
-            .flex-wrap {
-                flex-direction: column;
-                align-items: center;
-            }
             .blog-card {
-                width: 90%;
-                margin-left: 0;
-                margin-right: 0;
+                max-width: 90%; /* Slightly smaller width for tablets */
+                height: 28rem; /* Increase height */
+            }
+            .blog-card img {
+                height: 14rem; /* Adjust image height */
             }
         }
-    
+        
+        /* For small mobile devices */
         @media (max-width: 480px) {
-            .learn-more-btn {
-                padding: 0.5rem 1rem;
-                font-size: 0.75rem;
+            .blog-card {
+                max-width: 100%; /* Full width for mobile */
+                height: 35rem; /* Make the card even taller */
             }
-        } 
-
+            .blog-card img {
+                height: 16rem; /* Adjust image height */
+            }
+        }
+        
     </style>
 
           
@@ -309,8 +292,8 @@
     
     <!-- Content Section -->
     <div class="w-full md:w-1/2 md:pl-8">
-        <h1 class="display-4 mb-3 font-bold" style="color:#F7D674;  font-size: 3rem;">   Premium Bulk Honey</h2>
-            <p style="font-size: 1rem; line-height: 1.5rem;">
+        <h1 class="display-4 mb-3 font-semibold" style="color:#F7D674;  font-size: 3rem;">   Premium Bulk Honey</h2>
+            <p class="text-gray-900 leading-relaxed text-sm md:text-base lg:font-medium mb-6 font-light">
             Discover the finest bulk honey, pure and unprocessed for the highest quality. Sourced from trusted beekeepers, our honey is rich in natural sweetness and nutrients, perfect for diverse culinary uses. Ideal for businesses and enthusiasts alike, our bulk honey ensures authenticity and excellence in every drop.
         </p>
     </div>
@@ -323,8 +306,9 @@
         <div class="row g-0 gx-5 align-items-end mb-5">
             <div class="col-lg-6">
                 <div class="section-header text-start mb-5" style="max-width: 500px;">
-                    <h1 class="display-4 mb-3" style="color: #F7D674; font-size: 3rem; font-weight: 600;">Bulk Honey Products</h1>
-                    <p style="font-size: 1.2rem;">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                    <h1 class="mb-3" style="color: #F7D674; font-size: 2rem; font-weight: 600;"> Bulk Honey Products</h1>
+                    <p class="text-gray-900 leading-relaxed text-sm md:text-base lg:font-semibold mb-6 font-light">     
+                          Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
                 </div>
             </div>
             <div class="col-lg-6 text-start text-lg-end">

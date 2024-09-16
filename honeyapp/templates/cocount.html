@@ -194,22 +194,21 @@
             border-radius: 0.5rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            width: 300px; /* Fixed width for card */
-            height: 22rem; /* Fixed height for card */
             transition: transform 0.3s ease-in-out;
         }
-    
+        
         .blog-card img {
             width: 100%;
             height: 10rem; /* Fixed height for images */
             object-fit: cover;
         }
-    
+        
         .blog-card h1 {
             margin-bottom: 0.5rem;
             font-size: 1.125rem;
+            color: #8D8741;
         }
-    
+        
         .blog-card p {
             margin-bottom: 0.5rem;
             color: #6b7280;
@@ -219,55 +218,48 @@
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
         }
-    
+        
         .learn-more-btn {
-            width: 80px; /* Fixed width */
-            height: 30px; /* Fixed height */
-            padding: 0; /* Remove padding to fit dimensions */
-            font-size: 0.75rem; /* Font size */
-            border: 2px solid #D2B48C; /* Border color */
-            border-radius: 0.25rem; /* Border radius for rounded corners */
-            background-color:#D2B48C;  /* Background color */
-            color: #333; /* Text color */
-            text-align: center; /* Center text horizontally */
-            line-height: 30px; /* Center text vertically */
-            text-decoration: none; /* Remove underline */
-            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+            display: inline-block;
+            width: 100px; /* Adjust width as needed */
+            height: 36px; /* Adjust height as needed */
+            padding: 0.5rem; /* Adjust padding for vertical spacing */
+            font-size: 0.75rem; /* Adjust font size */
+            line-height: 1.5; /* Adjust line height */
+            border: 1px solid #8D8741; /* Border color matching button color */
+            border-radius: 0.25rem; /* Rounded corners */
+            background-color: #8D8741; /* Button background color */
+            color: #fff; /* Text color */
+            text-align: center;
+            text-decoration: none;
+            display: flex; /* Flex to center text */
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         
         .learn-more-btn:hover {
-            background-color: #D2B48C; /* Darker background on hover */
-            color: #fff; /* Change text color on hover */
+            background-color: #6D6D2D; /* Darker background on hover */
+            color: #fff;
         }
         
         
-    
-        @media (max-width: 1024px) {
-            .blog-card {
-                width: 90%;
-            }
-        }
-    
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .flex-wrap {
-                flex-direction: column;
-                align-items: center;
-            }
             .blog-card {
-                width: 90%;
+                width: 100%;
+                max-width: 100%;
                 margin-left: 0;
                 margin-right: 0;
             }
-        }
-    
-        @media (max-width: 480px) {
+        
             .learn-more-btn {
-                padding: 0.5rem 1rem;
+                padding: 0.5rem;
                 font-size: 0.75rem;
             }
-        } 
-    
-
+        }
+        
+        
     </style>
 
           
@@ -353,7 +345,7 @@
     
     <!-- Content Section -->
     <div class="w-full md:w-1/2 md:pl-8">
-        <h2 class="text-2xl md:text-3xl lg:text-4xl font-normal mb-4 leading-tight" style="color:#D2B48C; "> Coconut Powder & Coconut Dried</h2>
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 leading-tight" style="color:#D2B48C; "> Coconut Powder & Coconut Dried</h2>
         <p class="text-Black-500 leading-relaxed text-sm md:text-base lg:font-medium mb-6 font-lighter">
             For years, fats and oils were often avoided due to concerns over health risks, GMOs, and other factors. However, times have changed, and now certain oils are celebrated for their health benefits. Our selection of organic, non-GMO vegetable oils provides a variety of flavors, functions, and nutritional profiles to suit your needs. Whether you're cooking, baking, or simply looking for a healthy oil option, our range has something for everyone.
         </p>
@@ -367,11 +359,11 @@
         <div class="row g-0 gx-5 align-items-end">
             <div class="col-lg-6">
                 <div class="section-header text-start mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                    <h1 class="display-4 mb-3 font-bold" style="color: #D2B48C;  font-size: 3rem;">
+                    <h1 class="mb-3" style="color:#D2B48C; font-size: 2rem; font-weight: 600;">
                         Coconut Products
                     </h1>
                     
-                    <p style="font-size: 1rem; line-height: 1.5rem;">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                    <p class="text-gray-900 leading-relaxed text-sm md:text-base lg:font-semibold mb-6 font-light">     Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
                 </div>
             </div>
             <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">

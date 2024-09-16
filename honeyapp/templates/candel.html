@@ -148,29 +148,26 @@
         .product-item small a:hover {
             color: var(--primary) !important;
         }
-        
-       
         .blog-card {
             border: 2px solid #e5e7eb;
             border-radius: 0.5rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            width: 300px; /* Fixed width for card */
-            height: 22rem; /* Fixed height for card */
             transition: transform 0.3s ease-in-out;
         }
-    
+        
         .blog-card img {
             width: 100%;
             height: 10rem; /* Fixed height for images */
             object-fit: cover;
         }
-    
+        
         .blog-card h1 {
             margin-bottom: 0.5rem;
             font-size: 1.125rem;
+            color: #8D8741;
         }
-    
+        
         .blog-card p {
             margin-bottom: 0.5rem;
             color: #6b7280;
@@ -180,54 +177,47 @@
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
         }
-    
+        
         .learn-more-btn {
-            width: 80px; /* Fixed width */
-            height: 30px; /* Fixed height */
-            padding: 0; /* Remove padding to fit dimensions */
-            font-size: 0.75rem; /* Font size */
-            border: 2px solid #FFB81C; /* Border color */
-            border-radius: 0.25rem; /* Border radius for rounded corners */
-            background-color: #FFB81C; /* Background color */
-            color: #333; /* Text color */
-            text-align: center; /* Center text horizontally */
-            line-height: 30px; /* Center text vertically */
-            text-decoration: none; /* Remove underline */
-            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+            display: inline-block;
+            width: 100px; /* Adjust width as needed */
+            height: 36px; /* Adjust height as needed */
+            padding: 0.5rem; /* Adjust padding for vertical spacing */
+            font-size: 0.75rem; /* Adjust font size */
+            line-height: 1.5; /* Adjust line height */
+            border: 1px solid #8D8741; /* Border color matching button color */
+            border-radius: 0.25rem; /* Rounded corners */
+            background-color: #8D8741; /* Button background color */
+            color: #fff; /* Text color */
+            text-align: center;
+            text-decoration: none;
+            display: flex; /* Flex to center text */
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         
         .learn-more-btn:hover {
-            background-color: #F9A825; /* Darker background on hover */
-            color: #fff; /* Change text color on hover */
+            background-color: #6D6D2D; /* Darker background on hover */
+            color: #fff;
         }
         
         
-    
-        @media (max-width: 1024px) {
-            .blog-card {
-                width: 90%;
-            }
-        }
-    
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .flex-wrap {
-                flex-direction: column;
-                align-items: center;
-            }
             .blog-card {
-                width: 90%;
+                width: 100%;
+                max-width: 100%;
                 margin-left: 0;
                 margin-right: 0;
             }
-        }
-    
-        @media (max-width: 480px) {
+        
             .learn-more-btn {
-                padding: 0.5rem 1rem;
+                padding: 0.5rem;
                 font-size: 0.75rem;
             }
-        } 
-
+        }
+        
     </style>
 
           
@@ -309,8 +299,8 @@
     
     <!-- Content Section -->
     <div class="md:w-1/2 md:pl-8">
-        <h1 class="display-4 mb-3" style="color: #FFD966; font-size: 3rem;">Handcrafted Premium Candles</h2>
-            <p style="font-size: 1rem; line-height: 1.5rem;">
+        <h1 class="text-4xl font-semibold mb-4" style="color: #FEE29B;">Handcrafted Premium Candles</h2>
+            <p class="text-gray-900 leading-relaxed text-sm md:text-base lg:font-medium mb-6 font-light">
             Illuminate your space with our handcrafted premium candles, made from the finest natural ingredients. Each candle is carefully poured to ensure a clean, even burn, releasing soothing scents that transform your environment. Perfect for creating a calming ambiance, our candles are ideal for relaxation, meditation, or simply adding a touch of elegance to your decor. Experience the warmth and comfort of our premium candles, crafted with care for the discerning candle lover.
         </p>
     </div>
@@ -323,8 +313,8 @@
         <div class="row g-0 gx-5 align-items-end">
             <div class="col-lg-6">
                 <div class="section-header text-start mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                    <h1 class="display-4 mb-3" style="color: #FFD966; font-size: 2rem; line-height: 1.2rem;">Candle Products</h1>
-                    <p style="font-size: 1rem; line-height: 1.5rem;">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                    <h1 class="mb-3" style="color: #F7D674; font-size: 2rem; font-weight: 600;"> Candle Products</h1>
+                    <p class="text-gray-900 leading-relaxed text-sm md:text-base lg:font-semibold mb-6 font-light">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
                 </div>
             </div>
             <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
@@ -436,16 +426,19 @@
 
 
 <section class="w-screen py-20">
-    <h1 class="mb-12 text-center font-sans text-3xl font-bold" style="color: #FFB81C;">Candle Making Articles</h1>
+    <h1 class="mb-12 text-center font-sans text-3xl font-bold text-[#8D8741]">Oil Articles</h1>
 
-    <div class="flex justify-center flex-wrap gap-8">
-        <!-- Blog Card 1 -->
+    <div class="flex flex-wrap justify-center gap-8">
+        <!-- Blog Card 1: Coconut Oil Production -->
         <article class="blog-card bg-[#FFF7E1] rounded shadow-md overflow-hidden w-full max-w-xs">
-            <img class="w-full h-40 object-cover" src="{% static 'assets/images/c1.jpg' %}" alt="Candle making tips" />
-            <div class="p-4 h-48 flex flex-col">
-                <h2 class="font-semibold text-yellow-600 text-xs mb-1">Candle Crafting</h2>
-                <h1 class="font-semibold text-lg text-yellow-800 mb-2">Boosting Your Candle Production This Season</h1>
-                <p class="text-yellow-700 text-xs mt-2 flex-1 overflow-hidden">Discover new techniques to increase candle production and create stunning designs.</p>
+            <img class="w-full h-40 object-cover" src="{% static 'assets/images/cook3.avif' %}" alt="Coconut Oil Production" />
+            <div class="p-4 flex flex-col">
+                <h1 class="font-semibold text-xs mb-1 text-[#8D8741]">Coconut Oil</h1>
+
+                <p class="text-sm mb-2 text-black">
+                    Coconut oil stands out among cooking oils due to its content of short and medium-chain saturated fatty acids...
+                </p>
+
                 <div class="flex justify-between items-center text-xs mt-2">
                     <span class="font-semibold text-yellow-600">Oct 30, 2022 · 5 min read</span>
                     <span class="flex items-center text-yellow-600">
@@ -460,13 +453,16 @@
             </div>
         </article>
 
-        <!-- Blog Card 2 -->
+        <!-- Blog Card 2: Coconut Crafting -->
         <article class="blog-card bg-[#FFF7E1] rounded shadow-md overflow-hidden w-full max-w-xs">
-            <img class="w-full h-40 object-cover" src="{% static 'assets/images/c2.jpg' %}" alt="Candle collecting" />
-            <div class="p-4 h-48 flex flex-col">
-                <h2 class="font-semibold text-yellow-600 text-xs mb-1">Candle Collection</h2>
-                <h1 class="font-semibold text-lg text-yellow-800 mb-2">The Art of Collecting and Making Candles</h1>
-                <p class="text-yellow-700 text-xs mt-2 flex-1 overflow-hidden">Explore the artistry involved in candle making and how to create unique, beautiful candles.</p>
+            <img class="w-full h-40 object-cover" src="{% static 'assets/images/cook4.avif' %}" alt="Coconut Crafting" />
+            <div class="p-4 flex flex-col">
+                <h1 class="font-semibold text-xs mb-1 text-[#8D8741]">Coconut Oil</h1>
+
+                <p class="text-sm mb-2 text-black">
+                    Boost Metabolism Coconut oil is known to help boost metabolism due to its medium-chain triglycerides (MCTs)...
+                </p>
+
                 <div class="flex justify-between items-center text-xs mt-2">
                     <span class="font-semibold text-yellow-600">Oct 30, 2022 · 5 min read</span>
                     <span class="flex items-center text-yellow-600">
@@ -481,13 +477,15 @@
             </div>
         </article>
 
-        <!-- Blog Card 3 -->
+        <!-- Blog Card 3: Coconut Health Benefits -->
         <article class="blog-card bg-[#FFF7E1] rounded shadow-md overflow-hidden w-full max-w-xs">
-            <img class="w-full h-40 object-cover" src="{% static 'assets/images/c3.avif' %}" alt="Candle crafting guide" />
-            <div class="p-4 h-48 flex flex-col">
-                <h2 class="font-semibold text-yellow-600 text-xs mb-1">Candle Insights</h2>
-                <h1 class="font-semibold text-lg text-yellow-800 mb-2">Understanding the Techniques of Crafting Natural Candles</h1>
-                <p class="text-yellow-700 text-xs mt-2 flex-1 overflow-hidden">Learn about different techniques and materials for crafting high-quality natural candles.</p>
+            <img class="w-full h-40 object-cover" src="{% static 'assets/images/cook5.avif' %}" alt="Coconut Health" />
+            <div class="p-4 flex flex-col">
+                <h1 class="font-semibold text-xs mb-1 text-[#8D8741]">Coconut Oil</h1>
+                <p class="text-sm text-yellow-800 mb-2">
+                    Skin and Hair Care Coconut oil offers numerous benefits for skin and hair. It serves as an excellent natural moisturizer...
+                </p>
+
                 <div class="flex justify-between items-center text-xs mt-2">
                     <span class="font-semibold text-yellow-600">Oct 30, 2022 · 5 min read</span>
                     <span class="flex items-center text-yellow-600">
@@ -503,6 +501,7 @@
         </article>
     </div>
 </section>
+
 
 
 
@@ -620,33 +619,32 @@
             mobileMenu.classList.toggle('hidden');
         });
         </script>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                function adjustCardStyles() {
-                    const blogCards = document.querySelectorAll('.blog-card');
-                    const viewportWidth = window.innerWidth;
-            
-                    blogCards.forEach(card => {
-                        if (viewportWidth <= 480) { // For small screens
-                            card.style.marginLeft = '0';
-                            card.style.width = '100%'; // Full width
-                        } else if (viewportWidth <= 768) { // For tablets
-                            card.style.marginLeft = '0';
-                            card.style.width = '90%'; // Almost full width
-                        } else { // For larger screens
-                            card.style.marginLeft = '70px'; // Original margin
-                            card.style.width = '300px'; // Original width
-                        }
-                    });
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        function adjustCardStyles() {
+            const blogCards = document.querySelectorAll('.blog-card');
+            const viewportWidth = window.innerWidth;
+    
+            blogCards.forEach(card => {
+                if (viewportWidth <= 480) { // For small screens
+                    card.style.marginLeft = '0';
+                    card.style.width = '100%'; // Full width
+                } else if (viewportWidth <= 768) { // For tablets
+                    card.style.marginLeft = '0';
+                    card.style.width = '90%'; // Almost full width
+                } else { // For larger screens
+                    card.style.marginLeft = '70px'; // Original margin
+                    card.style.width = '300px'; // Original width
                 }
-            
-                adjustCardStyles(); // Initial call
-                window.addEventListener('resize', adjustCardStyles); // Call on resize
             });
-            </script>
+        }
+    
+        adjustCardStyles(); // Initial call
+        window.addEventListener('resize', adjustCardStyles); // Call on resize
+    });
+    </script>
 
-
+    </script> 
 
 </body>
 </html>

@@ -167,84 +167,69 @@
                 padding: 10px 20px; /* Adjust padding for button */
             }
         }
-        
         .blog-card {
             border: 2px solid #e5e7eb;
             border-radius: 0.5rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            width: 300px; /* Fixed width for card */
-            height: 22rem; /* Fixed height for card */
+            width: 100%;
+            max-width: 350px; /* Larger card size */
+            height: 25rem; /* Increased height */
             transition: transform 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
         }
-    
+        
         .blog-card img {
             width: 100%;
-            height: 10rem; /* Fixed height for images */
-            object-fit: cover;
+            height: 12rem; /* Adjust image height */
+            object-fit: cover; /* Ensure the image covers the area */
         }
-    
-        .blog-card h1 {
-            margin-bottom: 0.5rem;
-            font-size: 1.125rem;
-        }
-    
-        .blog-card p {
-            margin-bottom: 0.5rem;
-            color: #6b7280;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-        }
-    
+        
         .learn-more-btn {
-            width: 80px; /* Fixed width */
-            height: 30px; /* Fixed height */
-            padding: 0; /* Remove padding to fit dimensions */
-            font-size: 0.75rem; /* Font size */
-            border: 2px solid #FFB81C; /* Border color */
-            border-radius: 0.25rem; /* Border radius for rounded corners */
-            background-color: #FFB81C; /* Background color */
-            color: #333; /* Text color */
-            text-align: center; /* Center text horizontally */
-            line-height: 30px; /* Center text vertically */
-            text-decoration: none; /* Remove underline */
-            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+            width: 80px;
+            height: 30px;
+            padding: 0;
+            font-size: 0.75rem;
+            border: 2px solid #FFB81C;
+            border-radius: 0.25rem;
+            background-color: #FFB81C;
+            color: #333;
+            text-align: center;
+            line-height: 30px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         
         .learn-more-btn:hover {
-            background-color: #F9A825; /* Darker background on hover */
-            color: #fff; /* Change text color on hover */
+            background-color: #F9A825;
+            color: #fff;
         }
         
-        
-    
-        @media (max-width: 1024px) {
-            .blog-card {
-                width: 90%;
-            }
-        }
-    
+        /* For tablets and smaller screens */
         @media (max-width: 768px) {
-            .flex-wrap {
-                flex-direction: column;
-                align-items: center;
-            }
             .blog-card {
-                width: 90%;
-                margin-left: 0;
-                margin-right: 0;
+                max-width: 90%; /* Slightly smaller width for tablets */
+                height: 28rem; /* Increase height */
+            }
+            .blog-card img {
+                height: 14rem; /* Adjust image height */
             }
         }
-    
+        
+        /* For small mobile devices */
         @media (max-width: 480px) {
-            .learn-more-btn {
-                padding: 0.5rem 1rem;
-                font-size: 0.75rem;
+            .blog-card {
+                max-width: 100%; /* Full width for mobile */
+                height: 35rem; /* Make the card even taller */
             }
-        } 
+            .blog-card img {
+                height: 16rem; /* Adjust image height */
+            }
+        }
+        
+          
+      
     </style>
 
           
@@ -313,7 +298,7 @@
 
 <div class="relative bg-cover bg-center h-96" style="background-image: url('{% static "assets/images/beewax1.jpg" %}');">
     <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center px-8">
-        <h1 class="text text-4xl md:text-5xl lg:text-6xl font-bold text-Right" style="color: #FFD966;">beewax products</h1>
+        <h1 class="text text-4xl md:text-4xl lg:text-6xl font-bold text-right" style="color: #FFD966;">beewax products</h1>
         
     </div>
 </div>
@@ -329,8 +314,8 @@
     </div>
     <!-- Content Section -->
 <div class="md:w-1/2 md:pl-8">
-    <h2 class="text-2xl md:text-3xl lg:text-4xl font-normal mb-4 leading-tight" style="color:#FFD966; ">  Premium Beeswax</h2>
-    <p class="text-Black-500 leading-relaxed text-sm md:text-base lg:font-medium mb-6 font-lighter">
+    <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 leading-tight" style="color:#FFD966; ">  Premium Beeswax</h2>
+    <p class="text-gray-900 leading-relaxed text-sm md:text-base lg:font-semibold mb-6 font-light">  
         Our premium beeswax is crafted from the highest quality honeycomb, offering a natural and versatile product for a variety of applications. Perfect for skincare, candle making, and other crafts, this beeswax is pure, untreated, and packed with beneficial properties. Trusted by artisans and businesses, our beeswax guarantees consistency, purity, and exceptional quality in every batch.
     </p>
 </div>
@@ -343,8 +328,9 @@
         <div class="row g-0 gx-5 align-items-end">
             <div class="col-lg-6">
                 <div class="section-header text-start mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                    <h1 class="display-4 mb-3" style="color: #FFD966; font-size: 3rem;">Beewax Products</h1>
-                    <p style="font-size: 1rem; line-height: 1.5rem;">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                    <h1 class="mb-3" style="color: #F7D674; font-size: 2rem; font-weight: 600;">   Beewax Products</h1>
+                    <p class="text-gray-900 leading-relaxed text-sm md:text-base lg:font-semibold mb-6 font-light">    
+                  Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
                 </div>
             </div>
             <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
@@ -803,33 +789,31 @@
         });
         </script>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                function adjustCardStyles() {
-                    const blogCards = document.querySelectorAll('.blog-card');
-                    const viewportWidth = window.innerWidth;
-            
-                    blogCards.forEach(card => {
-                        if (viewportWidth <= 480) { // For small screens
-                            card.style.marginLeft = '0';
-                            card.style.width = '100%'; // Full width
-                        } else if (viewportWidth <= 768) { // For tablets
-                            card.style.marginLeft = '0';
-                            card.style.width = '90%'; // Almost full width
-                        } else { // For larger screens
-                            card.style.marginLeft = '70px'; // Original margin
-                            card.style.width = '300px'; // Original width
-                        }
-                    });
-                }
-            
-                adjustCardStyles(); // Initial call
-                window.addEventListener('resize', adjustCardStyles); // Call on resize
-            });
-            </script>
-
-
-
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function adjustCardStyles() {
+                const blogCards = document.querySelectorAll('.blog-card');
+                const viewportWidth = window.innerWidth;
+        
+                blogCards.forEach(card => {
+                    if (viewportWidth <= 480) { // For small screens
+                        card.style.width = '100%'; // Full width
+                        card.style.marginLeft = '0'; // Reset margin
+                    } else if (viewportWidth <= 768) { // For tablets
+                        card.style.width = '90%'; // Almost full width
+                        card.style.marginLeft = '0'; // Reset margin
+                    } else { // For larger screens
+                        card.style.width = '300px'; // Fixed width for larger screens
+                        card.style.marginLeft = '70px'; // Original margin
+                    }
+                });
+            }
+        
+            adjustCardStyles(); // Initial call
+            window.addEventListener('resize', adjustCardStyles); // Call on resize
+        });
+        
+    </script>
 
 </body>
 </html>

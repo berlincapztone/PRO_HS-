@@ -153,86 +153,85 @@
         .icon-color {
             color: #8B4513;
         }
-
-
+        /* Blog Card Styles */
         .blog-card {
-            border: 2px solid #e5e7eb;
-            border-radius: 0.5rem;
+            background-color: white;
+            border-radius: 0.375rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            width: 300px; /* Fixed width for card */
-            height: 22rem; /* Fixed height for card */
-            transition: transform 0.3s ease-in-out;
-        }
-    
-        .blog-card img {
             width: 100%;
-            height: 10rem; /* Fixed height for images */
-            object-fit: cover;
+            max-width: 350px; /* Increase the max-width for a slightly bigger card */
+            margin: auto;
         }
-    
-        .blog-card h1 {
-            margin-bottom: 0.5rem;
-            font-size: 1.125rem;
-        }
-    
-        .blog-card p {
-            margin-bottom: 0.5rem;
-            color: #6b7280;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-        }
-    
+        
+        /* Learn More Button Styles */
         .learn-more-btn {
-            width: 80px; /* Fixed width */
-            height: 30px; /* Fixed height */
-            padding: 0; /* Remove padding to fit dimensions */
-            font-size: 0.75rem; /* Font size */
-            border: 2px solid #FFB81C; /* Border color */
-            border-radius: 0.25rem; /* Border radius for rounded corners */
-            background-color: #FFB81C; /* Background color */
-            color: #333; /* Text color */
-            text-align: center; /* Center text horizontally */
-            line-height: 30px; /* Center text vertically */
-            text-decoration: none; /* Remove underline */
-            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+            display: inline-block;
+            width: 100%;
+            max-width: 140px; /* Increased width for bigger screens */
+            height: 35px; /* Slightly taller button */
+            padding: 0;
+            font-size: 0.85rem; /* Adjusted font size */
+            border: 2px solid #FFB81C;
+            border-radius: 0.25rem;
+            background-color: #FFB81C;
+            color: #333;
+            text-align: center;
+            line-height: 35px; /* Adjust line-height */
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin-top: auto;
         }
         
         .learn-more-btn:hover {
-            background-color: #F9A825; /* Darker background on hover */
-            color: #fff; /* Change text color on hover */
+            background-color: #F9A825;
+            color: #fff;
         }
         
-        
-    
+        /* Responsive Styles */
         @media (max-width: 1024px) {
-            .blog-card {
-                width: 90%;
-            }
-        }
-    
-        @media (max-width: 768px) {
-            .flex-wrap {
-                flex-direction: column;
-                align-items: center;
-            }
-            .blog-card {
-                width: 90%;
-                margin-left: 0;
-                margin-right: 0;
-            }
-        }
-    
-        @media (max-width: 480px) {
             .learn-more-btn {
-                padding: 0.5rem 1rem;
-                font-size: 0.75rem;
+                max-width: 100%; /* Full width on tablets */
             }
-        }   
-     
+        }
+        
+        @media (max-width: 768px) {
+            .blog-card {
+                max-width: 90%; /* Make the card larger on mobile */
+            }
+        
+            .learn-more-btn {
+                max-width: 20%; /* Full width on mobile */
+                font-size: 0.9rem; /* Slightly bigger text for mobile */
+            }
+        
+            .blog-card h1 {
+                font-size: 1.5rem; /* Larger font size for h1 on mobile */
+            }
+        
+            .blog-card p {
+                font-size: 1.125rem; /* Larger font size for paragraphs on mobile */
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .blog-card {
+                max-width: 95%; /* Make cards slightly bigger on smaller screens */
+            }
+        
+            .learn-more-btn {
+                font-size: 1rem; /* Bigger text for small screens */
+            }
+        
+            .blog-card h1 {
+                font-size: 1.5rem;
+            }
+        
+            .blog-card p {
+                font-size: 1.25rem;
+            }
+        }
+        
     </style>
 
           
@@ -318,7 +317,7 @@
     
     <!-- Content Section -->
     <div class="w-full md:w-1/2 md:pl-8">
-        <h2 class="text-2xl md:text-3xl lg:text-4xl font-normal mb-4 leading-tight" style="color:#8B4513; ">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 leading-tight" style="color:#8B4513; ">
             Spices  &  Western Ghats Spices
         </h2>
         
@@ -501,18 +500,15 @@
 
     <!-- Grid container for blog cards -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-4">
-        <!-- Blog Card 1: Coconut Oil Production -->
-        <article class="bg-[#FFF7E1] rounded shadow-md overflow-hidden w-full max-w-xs mx-auto">
-            <img class="w-full h-40 object-cover" src="{% static 'assets/images/tamarind_426725461-500x322.jpg' %}" alt="Coconut Oil Production" />
+        <!-- Blog Card 1: Tamarind -->
+        <article class="bg-[#FFF7E1] rounded shadow-md overflow-hidden w-full max-w-xs mx-auto blog-card">
+            <img class="w-full h-40 object-cover" src="{% static 'assets/images/tamarind_426725461-500x322.jpg' %}" alt="Tamarind" />
             <div class="p-4 flex flex-col">
                 <h1 class="font-semibold text-sm mb-1" style="color:#8B4513;">Tamarind</h1>
                 <p class="text-sm mb-2" style="color: black;">
-               <strong> Uses:</strong> Tamarind is used extensively in Indian, Southeast Asian, and Latin American cuisines. It adds tanginess to curries, chutneys, sauces, and beverages.
-               <strong> Medicinal Benefits:</strong> It is rich in antioxidants and has been used to aid digestion, improve heart health, and manage blood sugar levels.
+                    <strong>Uses:</strong> Tamarind is used extensively in Indian, Southeast Asian, and Latin American cuisines. It adds tanginess to curries, chutneys, sauces, and beverages.<br>
+                    <strong>Medicinal Benefits:</strong> It is rich in antioxidants and has been used to aid digestion, improve heart health, and manage blood sugar levels.
                 </p>
-                <br>
-                <br>
-                <br>
                 <div class="flex justify-between items-center text-xs mt-2">
                     <span class="font-semibold text-yellow-600">Oct 30, 2022 · 5 min read</span>
                     <span class="flex items-center text-yellow-600">
@@ -527,17 +523,15 @@
             </div>
         </article>
 
-        <!-- Blog Card 2: Coconut Crafting -->
-        <article class="bg-[#FFF7E1] rounded shadow-md overflow-hidden w-full max-w-xs mx-auto">
-            <img class="w-full h-40 object-cover" src="{% static 'assets/images/pepper.avif' %}" alt="Coconut Crafting" />
+        <!-- Blog Card 2: Pepper -->
+        <article class="bg-[#FFF7E1] rounded shadow-md overflow-hidden w-full max-w-xs mx-auto blog-card">
+            <img class="w-full h-40 object-cover" src="{% static 'assets/images/pepper.avif' %}" alt="Pepper" />
             <div class="p-4 flex flex-col">
                 <h1 class="font-semibold text-sm mb-1" style="color:#8B4513;">Pepper</h1>
                 <p class="text-sm mb-2" style="color: black;">
-                    <strong> Uses:</strong> Pepper is one of the most commonly used spices worldwide. It adds heat and depth to savory dishes, including soups, sauces, marinades, and meat dishes.<br>
-                    <strong> Medicinal Benefits:</strong> Known for its digestive properties, it enhances nutrient absorption and has anti-inflammatory, antibacterial, and antioxidant properties.
+                    <strong>Uses:</strong> Pepper is one of the most commonly used spices worldwide. It adds heat and depth to savory dishes, including soups, sauces, marinades, and meat dishes.<br>
+                    <strong>Medicinal Benefits:</strong> Known for its digestive properties,  antibacterial, and antioxidant properties.
                 </p>
-                <br>
-                <br>
                 <div class="flex justify-between items-center text-xs mt-2">
                     <span class="font-semibold text-yellow-600">Oct 30, 2022 · 5 min read</span>
                     <span class="flex items-center text-yellow-600">
@@ -553,15 +547,14 @@
         </article>
 
         <!-- Blog Card 3: Nutmeg -->
-        <article class="bg-[#FFF7E1] rounded shadow-md overflow-hidden w-full max-w-xs mx-auto">
+        <article class="bg-[#FFF7E1] rounded shadow-md overflow-hidden w-full max-w-xs mx-auto blog-card">
             <img class="w-full h-40 object-cover" src="{% static 'assets/images/Nutmeg.png' %}" alt="Nutmeg" />
             <div class="p-4 flex flex-col">
                 <h1 class="font-semibold text-sm mb-1" style="color:#8B4513;">Nutmeg</h1>
                 <p class="text-sm mb-2" style="color: black;">
-                    <strong> Uses:</strong>It is used in both sweet and savory dishes, including desserts like , and in dishes like curries and soups. It’s also a key ingredient in spice blends like garam masala.<br>
-                    <strong> Medicinal Benefits:</strong>Nutmeg is believed to help with digestion, pain relief, .  it can have psychoactive effects and should be used cautiously.
+                    <strong>Uses:</strong> Nutmeg is used in both sweet and savory dishes, including desserts and curries. It’s also a key ingredient in spice blends like garam masala.<br>
+                    <strong>Medicinal Benefits:</strong> Nutmeg is believed to help with digestion and pain relief. It can have psychoactive effects and should be used cautiously.
                 </p>
-                <br>
                 <div class="flex justify-between items-center text-xs mt-2">
                     <span class="font-semibold text-yellow-600">Oct 30, 2022 · 5 min read</span>
                     <span class="flex items-center text-yellow-600">
@@ -577,15 +570,14 @@
         </article>
 
         <!-- Blog Card 4: Cloves -->
-        <article class="bg-[#FFF7E1] rounded shadow-md overflow-hidden w-full max-w-xs mx-auto">
+        <article class="bg-[#FFF7E1] rounded shadow-md overflow-hidden w-full max-w-xs mx-auto blog-card">
             <img class="w-full h-40 object-cover" src="{% static 'assets/images/Cloves-1.png' %}" alt="Cloves" />
             <div class="p-4 flex flex-col">
                 <h1 class="font-semibold text-sm mb-1" style="color:#8B4513;">Cloves</h1>
                 <p class="text-sm mb-2" style="color: black;">
-                    <strong> Uses:</strong>Cloves are used to flavor meats, curries, and marinades. They are also popular in spice blends, baked goods, and beverages like mulled wine and tea.
-                    <strong> Medicinal Benefits:</strong>Cloves have potent antimicrobial, anti-inflammatory, and antioxidant properties. They are also used to relieve toothaches and improve digestion.
+                    <strong>Uses:</strong> Cloves are used to flavor meats, curries, and marinades. They are also popular in spice blends,  and beverages like mulled wine and tea.<br>
+                    <strong>Medicinal Benefits:</strong> Cloves have potent antimicrobial, anti-inflammatory, They are also used to relieve toothaches and improve digestion.
                 </p>
-                <br>
                 <div class="flex justify-between items-center text-xs mt-2">
                     <span class="font-semibold text-yellow-600">Oct 30, 2022 · 5 min read</span>
                     <span class="flex items-center text-yellow-600">
@@ -596,21 +588,11 @@
                         3.5K
                     </span>
                 </div>
-                
                 <a href="#" class="learn-more-btn mt-2">Learn More</a>
             </div>
         </article>
     </div>
 </section>
-
-
-
-
-
-
-
-
-
 
 
 <div class="container-fluid footer bg-light py-5 wow fadeIn" data-wow-delay="0.2s">
