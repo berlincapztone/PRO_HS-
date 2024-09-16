@@ -153,85 +153,75 @@
         .icon-color {
             color: #8B4513;
         }
-        /* Blog Card Styles */
+
         .blog-card {
-            background-color: white;
+            background-color: ;
             border-radius: 0.375rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             width: 100%;
-            max-width: 350px; /* Increase the max-width for a slightly bigger card */
+            max-width: 350px;
             margin: auto;
         }
-        
+    
         /* Learn More Button Styles */
         .learn-more-btn {
             display: inline-block;
             width: 100%;
-            max-width: 140px; /* Increased width for bigger screens */
-            height: 35px; /* Slightly taller button */
+            max-width: 140px;
+            height: 35px;
             padding: 0;
-            font-size: 0.85rem; /* Adjusted font size */
+            font-size: 0.85rem;
             border: 2px solid #FFB81C;
             border-radius: 0.25rem;
             background-color: #FFB81C;
             color: #333;
             text-align: center;
-            line-height: 35px; /* Adjust line-height */
+            line-height: 35px;
             text-decoration: none;
             transition: background-color 0.3s ease, color 0.3s ease;
             margin-top: auto;
         }
-        
+    
         .learn-more-btn:hover {
             background-color: #F9A825;
             color: #fff;
         }
-        
+    
         /* Responsive Styles */
-        @media (max-width: 1024px) {
-            .learn-more-btn {
-                max-width: 100%; /* Full width on tablets */
-            }
-        }
-        
         @media (max-width: 768px) {
             .blog-card {
-                max-width: 90%; /* Make the card larger on mobile */
+                max-width: 100%; /* Full width on tablets and below */
+                margin: 0 auto; /* Center the card */
             }
-        
+    
             .learn-more-btn {
-                max-width: 20%; /* Full width on mobile */
+                max-width: 30%; /* Full width on mobile */
                 font-size: 0.9rem; /* Slightly bigger text for mobile */
             }
-        
+    
             .blog-card h1 {
                 font-size: 1.5rem; /* Larger font size for h1 on mobile */
             }
-        
+    
             .blog-card p {
                 font-size: 1.125rem; /* Larger font size for paragraphs on mobile */
             }
         }
-        
+    
         @media (max-width: 480px) {
-            .blog-card {
-                max-width: 95%; /* Make cards slightly bigger on smaller screens */
-            }
-        
             .learn-more-btn {
                 font-size: 1rem; /* Bigger text for small screens */
             }
-        
+    
             .blog-card h1 {
                 font-size: 1.5rem;
             }
-        
+    
             .blog-card p {
                 font-size: 1.25rem;
             }
         }
-        
     </style>
 
           
@@ -317,11 +307,11 @@
     
     <!-- Content Section -->
     <div class="w-full md:w-1/2 md:pl-8">
-        <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 leading-tight" style="color:#8B4513; ">
+        <h2 class="text-4xl font-semibold mb-4"   style="color:#8B4513; ">
             Spices  &  Western Ghats Spices
         </h2>
         
-        <p class="text-Black-500 leading-relaxed text-sm md:text-base lg:font-medium mb-6 font-lighter">
+        <p class="text-gray-900 leading-relaxed text-sm md:text-base lg:font-medium mb-6 font-light">
             The Western Ghats, a UNESCO World Heritage Site, is one of the most biodiverse regions in India, known for its rich variety of flora and fauna, as well as its unique and aromatic spices. The cool, misty climate and fertile soils of the region make it an ideal place for cultivating some of the world's most renowned spices.
         </p>
     </div>
@@ -332,11 +322,12 @@
         <div class="row g-0 gx-5 align-items-end">
             <div class="col-lg-6">
                 <div class="section-header text-start mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                    <h1 class="display-4 mb-3 font-bold" style="color:#8B4513;   font-size: 3rem;">
+                    <h1 class="mb-3" style="color:#8B4513;  font-size: 2rem; font-weight: 600;">
                         Spices Products
                     </h1>
                     
-                    <p style="font-size: 1.2rem;">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                    <p class="text-gray-900 leading-relaxed text-sm md:text-base lg:font-semibold mb-6 font-light">
+                    Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
                 </div>
             </div>
             <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">

@@ -154,61 +154,71 @@
             border-radius: 0.5rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            width: 100%;
-            max-width: 350px; /* Larger card size */
-            height: 25rem; /* Increased height */
             transition: transform 0.3s ease-in-out;
-            display: flex;
-            flex-direction: column;
         }
         
         .blog-card img {
             width: 100%;
-            height: 12rem; /* Adjust image height */
-            object-fit: cover; /* Ensure the image covers the area */
+            height: 10rem; /* Fixed height for images */
+            object-fit: cover;
+        }
+        
+        .blog-card h1 {
+            margin-bottom: 0.5rem;
+            font-size: 1.125rem;
+            color: #8D8741;
+        }
+        
+        .blog-card p {
+            margin-bottom: 0.5rem;
+            color: #6b7280;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
         }
         
         .learn-more-btn {
-            width: 80px;
-            height: 30px;
-            padding: 0;
-            font-size: 0.75rem;
-            border: 2px solid #FFB81C;
-            border-radius: 0.25rem;
-            background-color: #FFB81C;
-            color: #333;
+            display: inline-block;
+            width: 100px; /* Adjust width as needed */
+            height: 36px; /* Adjust height as needed */
+            padding: 0.5rem; /* Adjust padding for vertical spacing */
+            font-size: 0.75rem; /* Adjust font size */
+            line-height: 1.5; /* Adjust line height */
+            border: 1px solid #FFD966; ; /* Border color matching button color */
+            border-radius: 0.25rem; /* Rounded corners */
+            background-color: #FFD966; /* Button background color */
+            color: #fff; /* Text color */
             text-align: center;
-            line-height: 30px;
             text-decoration: none;
+            display: flex; /* Flex to center text */
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
             transition: background-color 0.3s ease, color 0.3s ease;
         }
         
         .learn-more-btn:hover {
-            background-color: #F9A825;
+            background-color:#FFD966; /* Darker background on hover */
             color: #fff;
         }
         
-        /* For tablets and smaller screens */
+        
+        /* Responsive Design */
         @media (max-width: 768px) {
             .blog-card {
-                max-width: 90%; /* Slightly smaller width for tablets */
-                height: 28rem; /* Increase height */
+                width: 100%;
+                max-width: 100%;
+                margin-left: 0;
+                margin-right: 0;
             }
-            .blog-card img {
-                height: 14rem; /* Adjust image height */
+        
+            .learn-more-btn {
+                padding: 0.5rem;
+                font-size: 0.75rem;
             }
         }
         
-        /* For small mobile devices */
-        @media (max-width: 480px) {
-            .blog-card {
-                max-width: 100%; /* Full width for mobile */
-                height: 35rem; /* Make the card even taller */
-            }
-            .blog-card img {
-                height: 16rem; /* Adjust image height */
-            }
-        }
         
     </style>
 
@@ -425,16 +435,25 @@
 
 
 <section class="w-screen py-20">
-    <h1 class="mb-12 text-center font-sans text-3xl font-bold" style="color: #FFB81C;">Honey Production Articles</h1>
-
-    <div class="flex justify-center flex-wrap gap-8">
-        <!-- Blog Card 1 -->
+    <h1 class="mb-12 text-center font-sans text-3xl font-bold" style="color: #FFD966;">
+        Bulk Honey Articles
+    </h1>
+    
+    
+    <div class="flex flex-wrap justify-center gap-8">
+        <!-- Blog Card 1: Coconut Oil Production -->
         <article class="blog-card bg-[#FFF7E1] rounded shadow-md overflow-hidden w-full max-w-xs">
-            <img class="w-full h-40 object-cover" src="{% static 'assets/images/Afdc6dcc0ab0e4dd6be8ea8dd2a0ecf6ds.avif' %}" alt="Honey production tips" />
-            <div class="p-4 h-48 flex flex-col">
-                <h2 class="font-semibold text-yellow-600 text-xs mb-1">Honey Harvesting</h2>
-                <h1 class="font-semibold text-lg text-yellow-800 mb-2">Maximizing Your Honey Production This Season</h1>
-                <p class="text-yellow-700 text-xs mt-2 flex-1 overflow-hidden">Discover new techniques to increase honey production and improve quality.</p>
+            <img class="w-full h-40 object-cover" src="{% static 'assets/images/Afdc6dcc0ab0e4dd6be8ea8dd2a0ecf6ds.avif' %}" alt="Coconut Oil Production" />
+            <div class="p-4 flex flex-col">
+                <h1 class="font-semibold text-xs mb-1" style="color: #FFD966;">
+                    Honey Harvesting
+                </h1>
+                
+
+                <p class="text-sm mb-2 text-black">
+                    Coconut oil stands out among cooking oils due to its content of short and medium-chain saturated fatty acids...
+                </p>
+
                 <div class="flex justify-between items-center text-xs mt-2">
                     <span class="font-semibold text-yellow-600">Oct 30, 2022 · 5 min read</span>
                     <span class="flex items-center text-yellow-600">
@@ -442,20 +461,23 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
                         </svg>
-                        4.2K
+                        3.5K
                     </span>
                 </div>
                 <a href="#" class="learn-more-btn mt-2">Learn More</a>
             </div>
         </article>
 
-        <!-- Blog Card 2 -->
+        <!-- Blog Card 2: Coconut Crafting -->
         <article class="blog-card bg-[#FFF7E1] rounded shadow-md overflow-hidden w-full max-w-xs">
-            <img class="w-full h-40 object-cover" src="{% static 'assets/images/He7c702670cd9473bad904dae01078265o.jpg ' %}" alt="Honey collecting" />
-            <div class="p-4 h-48 flex flex-col">
-                <h2 class="font-semibold text-yellow-600 text-xs mb-1">Beekeeping Basics</h2>
-                <h1 class="font-semibold text-lg text-yellow-800 mb-2">The Art of Collecting and Storing Honey</h1>
-                <p class="text-yellow-700 text-xs mt-2 flex-1 overflow-hidden">Learn how to efficiently collect and store honey while maintaining its natural quality.</p>
+            <img class="w-full h-40 object-cover" src="{% static 'assets/images/He7c702670cd9473bad904dae01078265o.jpg' %}" alt="Coconut Crafting" />
+            <div class="p-4 flex flex-col">
+                <h1 class="font-semibold text-xs mb-1" style="color: #FFD966;">    Beekeeping</h1>
+
+                <p class="text-sm mb-2 text-black">
+                    Boost Metabolism Coconut oil is known to help boost metabolism due to its medium-chain triglycerides (MCTs)...
+                </p>
+
                 <div class="flex justify-between items-center text-xs mt-2">
                     <span class="font-semibold text-yellow-600">Oct 30, 2022 · 5 min read</span>
                     <span class="flex items-center text-yellow-600">
@@ -463,20 +485,22 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
                         </svg>
-                        3.8K
+                        3.5K
                     </span>
                 </div>
                 <a href="#" class="learn-more-btn mt-2">Learn More</a>
             </div>
         </article>
 
-        <!-- Blog Card 3 -->
+        <!-- Blog Card 3: Coconut Health Benefits -->
         <article class="blog-card bg-[#FFF7E1] rounded shadow-md overflow-hidden w-full max-w-xs">
-            <img class="w-full h-40 object-cover" src="{% static 'assets/images/H942913c21ac94703b9669b3945aef417H.avif' %}" alt="Honey crafting guide" />
-            <div class="p-4 h-48 flex flex-col">
-                <h2 class="font-semibold text-yellow-600 text-xs mb-1">Honey Insights</h2>
-                <h1 class="font-semibold text-lg text-yellow-800 mb-2">The Science Behind Pure Honey Production</h1>
-                <p class="text-yellow-700 text-xs mt-2 flex-1 overflow-hidden">Understand the techniques and practices for producing pure, natural honey.</p>
+            <img class="w-full h-40 object-cover" src="{% static 'assets/images/H942913c21ac94703b9669b3945aef417H.avif' %}" alt="Coconut Health" />
+            <div class="p-4 flex flex-col">
+                <h1 class="font-semibold text-xs mb-1" style="color: #FFD966;">Honey Insight</h1>
+                <p class="text-sm text-yellow-800 mb-2">
+                    Skin and Hair Care Coconut oil offers numerous benefits for skin and hair. It serves as an excellent natural moisturizer...
+                </p>
+
                 <div class="flex justify-between items-center text-xs mt-2">
                     <span class="font-semibold text-yellow-600">Oct 30, 2022 · 5 min read</span>
                     <span class="flex items-center text-yellow-600">
@@ -484,7 +508,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
                         </svg>
-                        4.1K
+                        3.5K
                     </span>
                 </div>
                 <a href="#" class="learn-more-btn mt-2">Learn More</a>
