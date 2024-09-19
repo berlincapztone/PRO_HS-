@@ -122,7 +122,6 @@
         .hover\:text:hover {
             color: #914F1E; /* Change to brown on hover */
         }   
-        
         *** Product ***/
         .nav-pills .nav-item .btn {
             color: var(--dark);
@@ -148,47 +147,7 @@
         .product-item small a:hover {
             color: var(--primary) !important;
         }
-
-        /* General styling for the product cards */
-        .product-item {
-            margin-left: 60px; /* Apply margin-left */
-            transition: margin-left 0.3s ease; /* Smooth transition for margin changes */
-        }
-        
-        /* Ensure cards do not overflow on smaller screens */
-        @media (max-width: 1200px) {
-            .product-item {
-                margin-left: 30px;
-            }
-        }
-        
-        @media (max-width: 992px) {
-            .product-item {
-                margin-left: 15px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .product-item {
-                margin-left: 0; /* No margin on very small screens */
-            }
-        }
-        
-        /* Additional responsive styling for margins in row */
-        @media (max-width: 1200px) {
-            .row.g-4 {
-                margin-left: -15px; /* Adjust the row's margin to compensate for card margins */
-                margin-right: -15px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .row.g-4 {
-                margin-left: 0;
-                margin-right: 0;
-            }
-        }
-        
+ 
         .blog-card {
             background-color: ;
             border-radius: 0.375rem;
@@ -227,7 +186,7 @@
         /* Responsive Styles */
         @media (max-width: 768px) {
             .blog-card {
-                max-width: 100%; /* Full width on tablets and below */
+                max-width:100%; /* Full width on tablets and below */
                 margin: 0 auto; /* Center the card */
             }
     
@@ -269,15 +228,32 @@
 <!-- Pre-header Starts -->
 <div class="bg-yellow-300 py-2">
     <div class="container mx-auto flex flex-wrap justify-between items-center text-sm text-gray-600">
-        <div class="flex flex-wrap space-x-4 mb-2 md:mb-0">
-            <a href="#" class="flex items-center hover:text-gray-800"><i class="fa fa-envelope mr-2"></i> honey@gmail.com</a>
-            <a href="#" class="flex items-center hover:text-gray-800"><i class="fa fa-phone mr-2"></i> 1234567890</a>
+        <!-- Contact Information -->
+        <div class="flex flex-wrap space-x-4 items-center"> <!-- Removed mb-2 to ensure consistent alignment -->
+            <a href="#" class="flex items-center hover:text-gray-800">
+                <i class="fa fa-envelope mr-2 text-base"></i> <!-- Adjusted icon size and alignment -->
+                honey@gmail.com
+            </a>
+            <a href="#" class="flex items-center hover:text-gray-800">
+                <i class="fa fa-phone mr-2 text-base"></i> <!-- Adjusted icon size and alignment -->
+                1234567890
+            </a>
         </div>
-        <div class="flex flex-wrap space-x-4">
-            <a href="#" class="hover:text-gray-800"><i class="fa fa-facebook"></i></a>
-            <a href="#" class="hover:text-gray-800"><i class="fa fa-behance"></i></a>
-            <a href="#" class="hover:text-gray-800"><i class="fa fa-twitter"></i></a>
-            <a href="#" class="hover:text-gray-800"><i class="fa fa-dribbble"></i></a>
+
+        <!-- Social Media Icons -->
+        <div class="flex space-x-4 items-center"> <!-- Ensured consistent alignment -->
+            <a href="#" class="hover:text-gray-800">
+                <i class="fa fa-facebook text-lg"></i> <!-- Adjusted icon size and alignment -->
+            </a>
+            <a href="#" class="hover:text-gray-800">
+                <i class="fa fa-behance text-lg"></i> <!-- Adjusted icon size and alignment -->
+            </a>
+            <a href="#" class="hover:text-gray-800">
+                <i class="fa fa-twitter text-lg"></i> <!-- Adjusted icon size and alignment -->
+            </a>
+            <a href="#" class="hover:text-gray-800">
+                <i class="fa fa-dribbble text-lg"></i> <!-- Adjusted icon size and alignment -->
+            </a>
         </div>
     </div>
 </div>
@@ -358,116 +334,111 @@
         <div class="row g-0 gx-5 align-items-end">
             <div class="col-lg-6">
                 <div class="section-header text-start mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                    <h1 class="mb-3" style="color:#D2B48C; font-size: 2rem; font-weight: 600;">
-                        Coconut Products
-                    </h1>
-                    
-                    <p class="text-gray-900 leading-relaxed text-sm md:text-base lg:font-semibold mb-6 font-light">     Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                    <h1 class="mb-3" style="color: #D2B48C; font-size: 2rem; font-weight: 600;"> Coconut Products</h1>
+                    <p class="text-gray-900 leading-relaxed text-sm md:text-base lg:font-semibold mb-6 font-light">Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
                 </div>
             </div>
             <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
                 <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
                     <li class="nav-item me-2">
-                        <a class="btn border-2 rounded-full text-white" style="background-color: #D2B48C; border-color: #D2B48C;" data-bs-toggle="pill" href="#tab-1">Coconut</a>
+                        <a class="btn border-2 rounded-full text-white border-yellow-400 bg-yellow-400 hover:bg-yellow-500" data-bs-toggle="pill" href="#tab-1" style="border-color: #D2B48C; background-color: #D2B48C;">Candles</a>
                     </li>
                     <li class="nav-item me-2">
-                        <a class="btn border-2 rounded-full text-white" style="background-color: #D2B48C; border-color: #D2B48C;" data-bs-toggle="pill" href="#tab-2">Coconut</a>
+                        <a class="btn border-2 rounded-full text-white border-yellow-400 bg-yellow-400 hover:bg-yellow-500" data-bs-toggle="pill" href="#tab-2" style="border-color: #D2B48C; background-color: #D2B48C;">Candles</a>
                     </li>
                     <li class="nav-item me-0">
-                        <a class="btn border-2 rounded-full text-white" style="background-color: #D2B48C; border-color: #D2B48C;" data-bs-toggle="pill" href="#tab-3">Coconut</a>
+                        <a class="btn border-2 rounded-full text-white border-yellow-400 bg-yellow-400 hover:bg-yellow-500" data-bs-toggle="pill" href="#tab-3" style="border-color: #D2B48C; background-color: #D2B48C;" >Candles</a>
                     </li>
                 </ul>
-                
             </div>
         </div>
 
         <div class="tab-content">
-            <div id="tab-1" class="tab-pane fade show p-0 active">
-                <div class="row g-4">
-                    <!-- Product Card 1 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 mx-auto" style="margin-left: 0;">
-                        <div class="product-item">
-                            <div class="position-relative bg-light overflow-hidden">
-                                <img class="img-fluid w-100" src="{% static 'assets/images/dc3.avif' %}" alt="" style="height: 300px; object-fit: cover;">
-                                <div class="bg-[#FFD966] rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3" style="background-color:#D2B48C; ">New</div>
-                            </div>
-                            <div class="text-center p-4">
-                                <a class="d-block h5 mb-2 text-[#FFD966]" href=""> Dried coconut</a>
-                                <span class="text-black me-1"></span>
-                                <span class="text-body text-decoration-line-through"></span>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="w-50 text-center border-end py-2">
-                                    <a class="text-body" href="" style="color: #FFD966;">
-                                        <i class="fa fa-eye" style="color: #FFD966; margin-right: 5px;"></i>View detail
-                                    </a>
-                                </small>
-                                <small class="w-50 text-center py-2">
-                                    <a class="text-body" href="" style="color: #FFD966;">
-                                        <i class="fa fa-shopping-bag" style="color: #FFD966; margin-right: 5px;"></i>Add to cart
-                                    </a>
-                                </small>
-                            </div>
+            <div class="row g-4">
+                <!-- Product Card 1 -->
+                <div class="col-xl-3 col-lg-4 col-md-6 mx-auto" style="margin-left: 0;">
+                    <div class="product-item">
+                        <div class="position-relative bg-light overflow-hidden">
+                            <img class="img-fluid w-100" src="{% static 'assets/images/dc3.avif' %}" alt="" style="height: 300px; object-fit: cover;">
+                            <div class="bg-[#FFD966] rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3" style="background-color:#D2B48C; ">New</div>
                         </div>
-                    </div>
-                    <!-- Repeat Product Cards -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 mx-auto" style="margin-left: 0;">
-                        <div class="product-item">
-                            <div class="position-relative bg-light overflow-hidden">
-                                <img class="img-fluid w-100" src="{% static 'assets/images/dired.jpg' %}" alt="" style="height: 300px; object-fit: cover;">
-                                <div class="bg-[#FFD966] rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3" style="background-color:#D2B48C; ">New</div>
-                            </div>
-                            <div class="text-center p-4">
-                                <a class="d-block h5 mb-2 text-[#FFD966]" href="">Coconut dried</a>
-                                <span class="text-black me-1"></span>
-                                <span class="text-body text-decoration-line-through"></span>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="w-50 text-center border-end py-2">
-                                    <a class="text-body" href="" style="color: #FFD966;">
-                                        <i class="fa fa-eye" style="color: #FFD966; margin-right: 5px;"></i>View detail
-                                    </a>
-                                </small>
-                                <small class="w-50 text-center py-2">
-                                    <a class="text-body" href="" style="color: #FFD966;">
-                                        <i class="fa fa-shopping-bag" style="color: #FFD966; margin-right: 5px;"></i>Add to cart
-                                    </a>
-                                </small>
-                            </div>
+                        <div class="text-center p-4">
+                            <a class="d-block h5 mb-2 text-[#FFD966]" href="">Dried Cocount</a>
+                            <span class="text-black me-1"></span>
+                            <span class="text-body text-decoration-line-through"></span>
                         </div>
-                    </div>
-                    <!-- Additional Product Cards -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 mx-auto" style="margin-left: 0;">
-                        <div class="product-item">
-                            <div class="position-relative bg-light overflow-hidden">
-                                <img class="img-fluid w-100" src="{% static 'assets/images/cocpow1.jpg' %}" alt="" style="height: 300px; object-fit: cover;">
-                                <div class="bg-[#FFD966] rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3" style="background-color:#D2B48C; ">New</div>
-                            </div>
-                            <div class="text-center p-4">
-                                <a class="d-block h5 mb-2 text-[#FFD966]" href="">Coconut powder</a>
-                                <span class="text-black me-1"></span>
-                                <span class="text-body text-decoration-line-through"></span>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="w-50 text-center border-end py-2">
-                                    <a class="text-body" href="" style="color: #FFD966;">
-                                        <i class="fa fa-eye" style="color: #FFD966; margin-right: 5px;"></i>View detail
-                                    </a>
-                                </small>
-                                <small class="w-50 text-center py-2">
-                                    <a class="text-body" href="" style="color: #FFD966;">
-                                        <i class="fa fa-shopping-bag" style="color: #FFD966; margin-right: 5px;"></i>Add to cart
-                                    </a>
-                                </small>
-                            </div>
+                        <div class="d-flex border-top">
+                            <small class="w-50 text-center border-end py-2">
+                                <a class="text-body" href="" style="color: #FFD966;">
+                                    <i class="fa fa-eye" style="color: #FFD966; margin-right: 5px;"></i>View detail
+                                </a>
+                            </small>
+                            <small class="w-50 text-center py-2">
+                                <a class="text-body" href="" style="color: #FFD966;">
+                                    <i class="fa fa-shopping-bag" style="color: #FFD966; margin-right: 5px;"></i>Add to cart
+                                </a>
+                            </small>
                         </div>
                     </div>
                 </div>
-               <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <a href="#" class="btn" style="background-color:#D2B48C;  color: white; border-radius: 50px; padding: 10px 30px; font-size: 16px; margin-top:30px; position:center;">Browse More Products</a>
+                <!-- Repeat Product Cards -->
+                <div class="col-xl-3 col-lg-4 col-md-6 mx-auto" style="margin-left: 0;">
+                    <div class="product-item">
+                        <div class="position-relative bg-light overflow-hidden">
+                            <img class="img-fluid w-100" src="{% static 'assets/images/dired.jpg' %}" alt="" style="height: 300px; object-fit: cover;">
+                            <div class="bg-[#FFD966] rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3" style="background-color:#D2B48C; ">New</div>
+                        </div>
+                        <div class="text-center p-4">
+                            <a class="d-block h5 mb-2 text-[#FFD966]" href="">Coconut Dried</a>
+                            <span class="text-black me-1"></span>
+                            <span class="text-body text-decoration-line-through"></span>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="w-50 text-center border-end py-2">
+                                <a class="text-body" href="" style="color: #FFD966;">
+                                    <i class="fa fa-eye" style="color: #FFD966; margin-right: 5px;"></i>View detail
+                                </a>
+                            </small>
+                            <small class="w-50 text-center py-2">
+                                <a class="text-body" href="" style="color: #FFD966;">
+                                    <i class="fa fa-shopping-bag" style="color: #FFD966; margin-right: 5px;"></i>Add to cart
+                                </a>
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <!-- Additional Product Cards -->
+                <div class="col-xl-3 col-lg-4 col-md-6 mx-auto" style="margin-left: 0;">
+                    <div class="product-item">
+                        <div class="position-relative bg-light overflow-hidden">
+                            <img class="img-fluid w-100" src="{% static 'assets/images/240_F_162120185_fr9Ekw2MdBtGN8bGXwOmSQpcT6TlxymS.jpg' %}" alt="" style="height: 300px; object-fit: cover;">
+                            <div class="bg-[#FFD966] rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3" style="background-color:#D2B48C; ">New</div>
+                        </div>
+                        <div class="text-center p-4">
+                            <a class="d-block h5 mb-2 text-[#FFD966]" href="">Coconut Milk </a>
+                            <span class="text-black me-1"></span>
+                            <span class="text-body text-decoration-line-through"></span>
+                        </div>
+                        <div class="d-flex border-top">
+                            <small class="w-50 text-center border-end py-2">
+                                <a class="text-body" href="" style="color: #FFD966;">
+                                    <i class="fa fa-eye" style="color: #FFD966; margin-right: 5px;"></i>View detail
+                                </a>
+                            </small>
+                            <small class="w-50 text-center py-2">
+                                <a class="text-body" href="" style="color: #FFD966;">
+                                    <i class="fa fa-shopping-bag" style="color: #FFD966; margin-right: 5px;"></i>Add to cart
+                                </a>
+                            </small>
+                        </div>
                     </div>
                 </div>
             </div>
+           <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <a href="#" class="btn" style="background-color: #D2B48C; color: white; border-radius: 50px; padding: 10px 30px; font-size: 16px; margin-top:30px;">Browse More Products</a>
+                </div>
+            </div>
+        </div>
         </div>
     </div>
 </div>

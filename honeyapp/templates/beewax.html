@@ -1,38 +1,37 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <title>Honey Web</title>
+        
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <title>Honey Web</title>
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <!-- Tailwind CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        
+        <!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/2.3.4/assets/owl.theme.default.min.css">
+        
+        <!-- FontAwesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        
+        <!-- Additional CSS Files -->
+        <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/animated.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+        <script src="{% static 'path_to/owl.carousel.min.js' %}"></script>
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
-    <!-- Include jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Owl Carousel CSS -->
-    
- <!-- Owl Carousel CSS -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-  
-    
-    <!-- FontAwesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/animated.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
- 
     <style>
 
         /* Prevent horizontal overflow */
@@ -44,13 +43,15 @@
             height: 100%;
         }
 
+
+        /*** Footer Start ***/
         .footer {
-            background: url('{% static "assets/images/footer.jpg" %}') no-repeat center center;
+            background:url('{% static "assets/images/footer.jpg" %}')no-repeat center center;
             background-size: cover;
             position: relative;
             overflow: hidden;
         }
-    
+        
         .footer::before {
             content: "";
             position: absolute;
@@ -59,72 +60,69 @@
             width: 100%;
             height: 100%;
             background: rgba(255, 255, 255, 0.5); /* Light white overlay */
-            z-index: 0; /* Behind content */
+            filter: blur(8px); /* Adjust blur intensity */
+            z-index: 0; /* Make sure the overlay is behind the content */
         }
-    
+
         .footer .container {
             position: relative;
-            z-index: 1; /* Above overlay */
+            z-index: 1; /* Ensure content is above the overlay */
         }
-    
+        
         .footer .footer-item a {
             line-height: 35px;
-            color: var(--bs-dark); /* Dark color */
+            color: var(--bs-dark); /* Dark color for better readability */
             transition: 0.5s;
         }
-    
+
         .footer .footer-item p {
             line-height: 35px;
         }
-    
+
         .footer .footer-item a:hover {
             letter-spacing: 1px;
             color: var(--bs-primary);
         }
-    
+
+        .footer .footer-item .footer-btn a {
+            transition: 0.5s;
+        }
+
+        .footer .footer-item .footer-btn a:hover {
+            background: var(--bs-primary);
+            color: var(--bs-white);
+        }
+
         .footer .btn-primary {
             background-color: #d89c03; /* Yellow color */
-            border-color: #d89c03;
+            border-color: #d89c03; /* Yellow color */
         }
-    
+
         .footer .btn-primary:hover {
-            background-color: #b78102; /* Darker yellow */
-            border-color: #b78102;
+            background-color: #d89c03; /* Yellow color */
+            border-color: #d89c03; /* Yellow color */
             color: white;
         }
-    
+
         .footer-item img {
-            width: 50px;
-            height: auto;
+            width: 50px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: ; /* Optional: Add border-radius for a circular logo */
         }
-    
+
         .footer-item h3 {
-            margin-bottom: 0;
+            margin-bottom: 0; /* Remove bottom margin to better align with image */
         }
-    
-        @media (max-width: 767px) {
-            .footer-item h4 {
-                text-align: center;
-            }
-            .footer-item a {
-                text-align: center;
-            }
-            .footer-item p {
-                text-align: center;
-            }
-            .footer .container {
-                padding: 0 15px;
-            }
+
+        .footer-item p {
+            text-align: center; /* Center the paragraph text */
         }
-         
-        .text {
-            color: #914F1E; /* Custom brown color */
-        }
-        .hover\:text:hover {
-            color: #914F1E; /* Change to brown on hover */
-        }   
+        /*** Footer End ***/  
+
+  
+
         
-        *** Product ***/
+     / *** Product ***/
         .nav-pills .nav-item .btn {
             color: var(--dark);
         }
@@ -168,67 +166,76 @@
             }
         }
         .blog-card {
-            border: 2px solid #e5e7eb;
-            border-radius: 0.5rem;
+            background-color: ;
+            border-radius: 0.375rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             width: 100%;
-            max-width: 350px; /* Larger card size */
-            height: 25rem; /* Increased height */
-            transition: transform 0.3s ease-in-out;
-            display: flex;
-            flex-direction: column;
-        }
+            max-width: 350px;
+            margin: auto;
         
-        .blog-card img {
-            width: 100%;
-            height: 12rem; /* Adjust image height */
-            object-fit: cover; /* Ensure the image covers the area */
         }
-        
+    
+        /* Learn More Button Styles */
         .learn-more-btn {
-            width: 80px;
-            height: 30px;
+            display: inline-block;
+            width: 100%;
+            max-width: 100px;
+            height: 35px;
             padding: 0;
-            font-size: 0.75rem;
-            border: 2px solid #FFB81C;
-            border-radius: 0.25rem;
-            background-color: #FFB81C;
+            font-size: 0.85rem;
+            border: 2px solid #D2B48C;
+            border-radius: 1rem;
+            background-color:#D2B48C;
             color: #333;
             text-align: center;
-            line-height: 30px;
+            line-height: 35px;
             text-decoration: none;
             transition: background-color 0.3s ease, color 0.3s ease;
+            margin-top: auto;
         }
-        
+    
         .learn-more-btn:hover {
-            background-color: #F9A825;
+            background-color:#D2B48C;
             color: #fff;
         }
-        
-        /* For tablets and smaller screens */
+    
+        /* Responsive Styles */
         @media (max-width: 768px) {
             .blog-card {
-                max-width: 90%; /* Slightly smaller width for tablets */
-                height: 28rem; /* Increase height */
+                max-width:100%; /* Full width on tablets and below */
+                margin: 0 auto; /* Center the card */
             }
-            .blog-card img {
-                height: 14rem; /* Adjust image height */
+    
+            .learn-more-btn {
+                max-width: 40%; /* Full width on mobile */
+                font-size: 0.9rem; /* Slightly bigger text for mobile */
+            }
+    
+            .blog-card h1 {
+                font-size: 1.5rem; /* Larger font size for h1 on mobile */
+            }
+    
+            .blog-card p {
+                font-size: 1.125rem; /* Larger font size for paragraphs on mobile */
             }
         }
-        
-        /* For small mobile devices */
+    
         @media (max-width: 480px) {
-            .blog-card {
-                max-width: 100%; /* Full width for mobile */
-                height: 35rem; /* Make the card even taller */
+            .learn-more-btn {
+                font-size: 1rem; /* Bigger text for small screens */
             }
-            .blog-card img {
-                height: 16rem; /* Adjust image height */
+    
+            .blog-card h1 {
+                font-size: 1.5rem;
+            }
+    
+            .blog-card p {
+                font-size: 1.25rem;
             }
         }
         
-          
+        
       
     </style>
 
@@ -240,18 +247,34 @@
 <!-- Pre-header Starts -->
 <div class="bg-yellow-300 py-2">
     <div class="container mx-auto flex flex-wrap justify-between items-center text-sm text-gray-600">
-        <div class="flex flex-wrap space-x-4 mb-2 md:mb-0">
-            <a href="#" class="flex items-center hover:text-gray-800"><i class="fa fa-envelope mr-2"></i> honey@gmail.com</a>
-            <a href="#" class="flex items-center hover:text-gray-800"><i class="fa fa-phone mr-2"></i> 1234567890</a>
+        <!-- Contact Information -->
+        <div class="flex flex-wrap space-x-4 items-center"> <!-- Removed mb-2 to ensure consistent alignment -->
+            <a href="#" class="flex items-center hover:text-gray-800">
+                <i class="fa fa-envelope mr-2 text-base"></i> <!-- Adjusted icon size and alignment -->
+                honey@gmail.com
+            </a>
+            <a href="#" class="flex items-center hover:text-gray-800">
+                <i class="fa fa-phone mr-2 text-base"></i> <!-- Adjusted icon size and alignment -->
+                1234567890
+            </a>
         </div>
-        <div class="flex flex-wrap space-x-4">
-            <a href="#" class="hover:text-gray-800"><i class="fa fa-facebook"></i></a>
-            <a href="#" class="hover:text-gray-800"><i class="fa fa-behance"></i></a>
-            <a href="#" class="hover:text-gray-800"><i class="fa fa-twitter"></i></a>
-            <a href="#" class="hover:text-gray-800"><i class="fa fa-dribbble"></i></a>
+
+        <!-- Social Media Icons -->
+        <div class="flex space-x-4 items-center"> <!-- Ensured consistent alignment -->
+            <a href="#" class="hover:text-gray-800">
+                <i class="fa fa-facebook text-lg"></i> <!-- Adjusted icon size and alignment -->
+            </a>
+            <a href="#" class="hover:text-gray-800">
+                <i class="fa fa-behance text-lg"></i> <!-- Adjusted icon size and alignment -->
+            </a>
+            <a href="#" class="hover:text-gray-800">
+                <i class="fa fa-twitter text-lg"></i> <!-- Adjusted icon size and alignment -->
+            </a>
+            <a href="#" class="hover:text-gray-800">
+                <i class="fa fa-dribbble text-lg"></i> <!-- Adjusted icon size and alignment -->
+            </a>
         </div>
     </div>
-    
 </div>
 <!-- Pre-header End -->
 
@@ -336,13 +359,13 @@
             <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
                 <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
                     <li class="nav-item me-2">
-                        <a class="btn btn-rounded text-white" style="background-color: #FEE29B; border-color: #FEE29B;" data-bs-toggle="pill" href="#tab-1">Beewax</a>
+                        <a class="btn border-2 rounded-full text-white" style="background-color: #FEE29B; border-color: #FEE29B;" data-bs-toggle="pill" href="#tab-1">Beewax</a>
                     </li>
                     <li class="nav-item me-2">
-                        <a class="btn btn-rounded text-white" style="background-color: #FEE29B; border-color: #FEE29B;" data-bs-toggle="pill" href="#tab-2">beewax</a>
+                        <a class="btn border-2 rounded-full text-white" style="background-color: #FEE29B; border-color: #FEE29B;" data-bs-toggle="pill" href="#tab-2">beewax</a>
                     </li>
                     <li class="nav-item me-0">
-                        <a class="btn btn-rounded text-white" style="background-color: #FEE29B; border-color: #FEE29B;" data-bs-toggle="pill" href="#tab-3">beewax</a>
+                        <a class="btn border-2 rounded-full text-white" style="background-color: #FEE29B; border-color: #FEE29B;" data-bs-toggle="pill" href="#tab-3">beewax</a>
                     </li>
                 </ul>
                 
@@ -437,156 +460,8 @@
                 </div>
             </div>
             
-            <div id="tab-2" class="tab-pane fade show p-0">
-                <div class="row g-4">
-                    <!-- Product 1 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12" style="margin-left: 90px;" >
-                        <div class="product-item">
-                            <div class="position-relative bg-light overflow-hidden">
-                                <img class="img-fluid w-100" src="{% static 'assets/images/—Pngtree—a coconut oil_15672144.png' %}" alt="">
-                                <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                            </div>
-                            <div class="text-center p-4">
-                                <a class="d-block h5 mb-2" href="">Oil</a>
-                                <span class="text-primary me-1"></span>
-                                <span class="text-body text-decoration-line-through"></span>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="w-50 text-center border-end py-2">
-                                    <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                </small>
-                                <small class="w-50 text-center py-2">
-                                    <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                </small>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Repeat for other products -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                        <div class="product-item">
-                            <div class="position-relative bg-light overflow-hidden">
-                                <img class="img-fluid w-100" src="img/product-2.jpg" alt="">
-                                <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                            </div>
-                            <div class="text-center p-4">
-                                <a class="d-block h5 mb-2" href="">Oil</a>
-                                <span class="text-primary me-1">$19.00</span>
-                                <span class="text-body text-decoration-line-through">$29.00</span>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="w-50 text-center border-end py-2">
-                                    <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                </small>
-                                <small class="w-50 text-center py-2">
-                                    <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                </small>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Add more products as needed -->
             
-                    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="btn btn-primary rounded-pill py-3 px-5" href="">Browse More Products</a>
-                    </div>
-                </div>
-            </div>
-            
-        
-            <div id="tab-3" class="tab-pane fade show p-0">
-                <div class="row g-4">
-                    <!-- Product 1 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                        <div class="product-item" style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
-                            <div class="position-relative bg-light overflow-hidden">
-                                <img class="img-fluid w-100" src="img/product-1.jpg" alt="" style="object-fit: cover; height: 200px;">
-                                <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                            </div>
-                            <div class="text-center p-4">
-                                <a class="d-block h5 mb-2" href="" style="font-size: 1.25rem;">Oil</a>
-                                <span class="text-primary me-1"></span>
-                                <span class="text-body text-decoration-line-through"></span>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="w-50 text-center border-end py-2">
-                                    <a class="text-body" href="" style="font-size: 0.875rem;"><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                </small>
-                                <small class="w-50 text-center py-2">
-                                    <a class="text-body" href="" style="font-size: 0.875rem;"><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                </small>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product 2 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                        <div class="product-item" style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
-                            <div class="position-relative bg-light overflow-hidden">
-                                <img class="img-fluid w-100" src="img/product-2.jpg" alt="" style="object-fit: cover; height: 200px;">
-                                <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                            </div>
-                            <div class="text-center p-4">
-                                <a class="d-block h5 mb-2" href="" style="font-size: 1.25rem;">Oil</a>
-                                <span class="text-primary me-1"></span>
-                                <span class="text-body text-decoration-line-through"></span>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="w-50 text-center border-end py-2">
-                                    <a class="text-body" href="" style="font-size: 0.875rem;"><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                </small>
-                                <small class="w-50 text-center py-2">
-                                    <a class="text-body" href="" style="font-size: 0.875rem;"><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                </small>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product 3 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                        <div class="product-item" style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
-                            <div class="position-relative bg-light overflow-hidden">
-                                <img class="img-fluid w-100" src="img/product-3.jpg" alt="" style="object-fit: cover; height: 200px;">
-                                <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                            </div>
-                            <div class="text-center p-4">
-                                <a class="d-block h5 mb-2" href="" style="font-size: 1.25rem;">Oil</a>
-                                <span class="text-primary me-1"></span>
-                                <span class="text-body text-decoration-line-through"></span>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="w-50 text-center border-end py-2">
-                                    <a class="text-body" href="" style="font-size: 0.875rem;"><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                </small>
-                                <small class="w-50 text-center py-2">
-                                    <a class="text-body" href="" style="font-size: 0.875rem;"><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                </small>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product 4 -->
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                        <div class="product-item" style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
-                            <div class="position-relative bg-light overflow-hidden">
-                                <img class="img-fluid w-100" src="img/product-4.jpg" alt="" style="object-fit: cover; height: 200px;">
-                                <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
-                            </div>
-                            <div class="text-center p-4">
-                                <a class="d-block h5 mb-2" href="" style="font-size: 1.25rem;">Oil</a>
-                                <span class="text-primary me-1">$19.00</span>
-                                <span class="text-body text-decoration-line-through">$29.00</span>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="w-50 text-center border-end py-2">
-                                    <a class="text-body" href="" style="font-size: 0.875rem;"><i class="fa fa-eye text-primary me-2"></i>View detail</a>
-                                </small>
-                                <small class="w-50 text-center py-2">
-                                    <a class="text-body" href="" style="font-size: 0.875rem;"><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
-                                </small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <a class="btn rounded-pill py-3 px-5 text-white" href="" style="background-color: #FEE29B; border-color: #FEE29B; font-size: 1rem; padding: 10px 20px;" onmouseover="this.style.backgroundColor='#FDD87B'" onmouseout="this.style.backgroundColor='#FEE29B'">Browse More Products</a>
-
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>  
@@ -599,85 +474,90 @@
 
 
 <section class="w-screen py-20">
-    <h1 class="mb-12 text-center font-sans text-3xl font-bold" style="color: #FFD966;">
-        Beeswax Honey Article
+    <h1 class="mb-12 text-center font-sans text-3xl font-bold" style="color:#D2B48C; ">
+        Coconut product Articles
     </h1>
-    
-    
-    <div class="flex flex-wrap justify-center gap-8">
-        <!-- Blog Card 1: Coconut Oil Production -->
-        <article class="blog-card bg-[#FFF7E1] rounded shadow-md overflow-hidden w-full max-w-xs">
-            <img class="w-full h-40 object-cover" src="{% static 'assets/images/beewax1.jpg' %}" alt="Coconut Oil Production" />
-            <div class="p-4 flex flex-col">
-                <h1 class="font-semibold text-xs mb-1" style="color: #FFD966;">
-                    Beewax benefits
-                </h1>
-                
 
-                <p class="text-sm mb-2 text-black">
-                    Coconut oil stands out among cooking oils due to its content of short and medium-chain saturated fatty acids...
-                </p>
-
-                <div class="flex justify-between items-center text-xs mt-2">
-                    <span class="font-semibold text-yellow-600">Oct 30, 2022 · 5 min read</span>
-                    <span class="flex items-center text-yellow-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-                        </svg>
-                        3.5K
-                    </span>
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-4">
+            <!-- Blog Card 1 -->
+            <article class="bg-[#FFF7E1] rounded shadow-md overflow-hidden w-full blog-card">
+                <img class="w-full h-40 object-cover" src="{% static 'assets/images/dc3.avif' %}" alt="Tamarind" />
+                <div class="p-4 flex flex-col">
+                    <h1 class="font-semibold text-sm mb-1" style="color:#D2B48C;">Desiccated coconut</h1>
+                    <p class="text-sm mb-2" style="color: black;">
+                        <strong>Uses:</strong> Desiccated coconut (DC) is dehydrated coconut meat that is finely grated or shredded. It is produced widely in India and primarily used by the confectionery industry and other food sectors. <br>
+                        <strong id="med-benefits-1" class="hidden">Medicinal Benefits:</strong>
+                        <span id="med-benefits-text-1" class="hidden">
+                            DC also serves as an alternative to fresh grated coconut in many household recipes. The product is available in various grades, determined by the fineness of the coconut material.
+                        </span>
+                    </p>
+                    <div class="flex justify-between items-center text-xs mt-2">
+                        <span class="font-semibold text-yellow-600">Oct 30, 2022 · 5 min read</span>
+                        <span class="flex items-center text-yellow-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            </svg>
+                            3.5K
+                        </span>
+                    </div>
+                    <button class="learn-more-btn mt-2" onclick="toggleContent(1)">Learn More</button>
                 </div>
-                <a href="#" class="learn-more-btn mt-2">Learn More</a>
-            </div>
-        </article>
+            </article>
 
-        <!-- Blog Card 2: Coconut Crafting -->
-        <article class="blog-card bg-[#FFF7E1] rounded shadow-md overflow-hidden w-full max-w-xs">
-            <img class="w-full h-40 object-cover" src="{% static 'assets/images/beewax.jpg' %}" alt="Coconut Crafting" />
-            <div class="p-4 flex flex-col">
-                <h1 class="font-semibold text-xs mb-1" style="color: #FFD966;"> Beewax Harvesting</h1>
-
-                <p class="text-sm mb-2 text-black">
-                    Boost Metabolism Coconut oil is known to help boost metabolism due to its medium-chain triglycerides (MCTs)...
-                </p>
-
-                <div class="flex justify-between items-center text-xs mt-2">
-                    <span class="font-semibold text-yellow-600">Oct 30, 2022 · 5 min read</span>
-                    <span class="flex items-center text-yellow-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-                        </svg>
-                        3.5K
-                    </span>
+            <!-- Blog Card 2: Pepper -->
+            <article class="bg-[#FFF7E1] rounded shadow-md overflow-hidden w-full blog-card">
+                <img class="w-full h-40 object-cover" src="{% static 'assets/images/cocpow1.jpg'%}" alt="Pepper" />
+                <div class="p-4 flex flex-col">
+                    <h1 class="font-semibold text-sm mb-1" style="color:#D2B48C;">Coconut Powder</h1>
+                    <p class="text-sm mb-2" style="color: black;">
+                        <strong>Uses:</strong>Spray drying is an effective method for preserving coconut milk. The resulting spray-dried coconut milk powder can be easily reconstituted into liquid form by adding water, making it suitable for various culinary uses.<br>
+                        <strong id="med-benefits-2" class="hidden">Medicinal Benefits:</strong>
+                        <span id="med-benefits-text-2" class="hidden">
+                            This product offers advantages such as reduced storage requirements, cost-efficient bulk packaging, and a longer shelf life
+                        </span>
+                    </p>
+                    <div class="flex justify-between items-center text-xs mt-2">
+                        <span class="font-semibold text-yellow-600">Oct 30, 2022 · 5 min read</span>
+                        <span class="flex items-center text-yellow-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            </svg>
+                            3.5K
+                        </span>
+                    </div>
+                    <button class="learn-more-btn mt-2" onclick="toggleContent(2)">Learn More</button>
                 </div>
-                <a href="#" class="learn-more-btn mt-2">Learn More</a>
-            </div>
-        </article>
+            </article>
 
-        <!-- Blog Card 3: Coconut Health Benefits -->
-        <article class="blog-card bg-[#FFF7E1] rounded shadow-md overflow-hidden w-full max-w-xs">
-            <img class="w-full h-40 object-cover" src="{% static 'assets/images/beewax1.jpg' %}" alt="Coconut Health" />
-            <div class="p-4 flex flex-col">
-                <h1 class="font-semibold text-xs mb-1" style="color: #FFD966;">Beeswax Insight</h1>
-                <p class="text-sm mb-2 text-black">
-                    Skin and Hair Care Coconut oil offers numerous benefits for skin and hair. It serves  moisturizer...
-                </p>
-
-                <div class="flex justify-between items-center text-xs mt-2">
-                    <span class="font-semibold text-yellow-600">Oct 30, 2022 · 5 min read</span>
-                    <span class="flex items-center text-yellow-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-                        </svg>
-                        3.5K
-                    </span>
+            <!-- Blog Card 3: Nutmeg -->
+            <article class="bg-[#FFF7E1] rounded shadow-md overflow-hidden w-full blog-card">
+                <img class="w-full h-40 object-cover" src="{% static 'assets/images/240_F_162120185_fr9Ekw2MdBtGN8bGXwOmSQpcT6TlxymS.jpg' %}" alt="Nutmeg" />
+                <div class="p-4 flex flex-col">
+                    <h1 class="font-semibold text-sm mb-1" style="color:#D2B48C;">Coconut Milk</h1>
+                    <p class="text-sm mb-2" style="color: black;">
+                        <strong>Uses:</strong> Coconut milk is an emulsion of oil, protein, and water obtained by pressing fresh grated coconut. It comes in various forms: undiluted (coconut milk), diluted, and concentrated (coconut cream). <br>
+                        <strong id="med-benefits-3" class="hidden">Medicinal Benefits:</strong>
+                        <span id="med-benefits-text-3" class="hidden">
+                            Extracted from fresh coconut, it can be used directly or diluted for a wide range of dishes, including fish, meat, curries, desserts, and baked goods.
+                        </span>
+                    </p>
+                    <div class="flex justify-between items-center text-xs mt-2">
+                        <span class="font-semibold text-yellow-600">Oct 30, 2022 · 5 min read</span>
+                        <span class="flex items-center text-yellow-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            </svg>
+                            3.5K
+                        </span>
+                    </div>
+                    <button class="learn-more-btn mt-2" onclick="toggleContent(3)">Learn More</button>
                 </div>
-                <a href="#" class="learn-more-btn mt-2">Learn More</a>
-            </div>
-        </article>
+            </article>
+        </div>
     </div>
 </section>
 
@@ -686,9 +566,12 @@
 
   
 
+
+<!-- Footer Section -->
+
+<!-- Footer Section -->
 <div class="container-fluid footer bg-light py-5 wow fadeIn" data-wow-delay="0.2s">
     <div class="container py-5">
-        <!-- Subscription and Social Media Section -->
         <div class="row g-5 mb-5 align-items-center">
             <div class="col-lg-7">
                 <div class="position-relative mx-auto">
@@ -698,22 +581,21 @@
             </div>
             <div class="col-lg-5">
                 <div class="d-flex align-items-center justify-content-center justify-content-lg-end">
-                    <a class="btn btn-light btn-md-square me-3" href="#">
+                    <a class="btn btn-light btn-md-square me-3" href="">
                         <i class="fab fa-facebook-f" style="color: #d89c03;"></i>
                     </a>
-                    <a class="btn btn-light btn-md-square me-3" href="#">
+                    <a class="btn btn-light btn-md-square me-3" href="">
                         <i class="fab fa-twitter" style="color: #d89c03;"></i>
                     </a>
-                    <a class="btn btn-light btn-md-square me-3" href="#">
+                    <a class="btn btn-light btn-md-square me-3" href="">
                         <i class="fab fa-instagram" style="color: #d89c03;"></i>
                     </a>
-                    <a class="btn btn-light btn-md-square me-0" href="#">
+                    <a class="btn btn-light btn-md-square me-0" href="">
                         <i class="fab fa-linkedin-in" style="color: #d89c03;"></i>
                     </a>
                 </div>
             </div>
         </div>
-        <!-- Footer Links Section -->
         <div class="row g-5">
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column align-items-center">
@@ -721,7 +603,7 @@
                         <img src="{% static 'assets/images/true.jpg' %}" alt="Electra Logo" class="me-3">
                         <h3 class="text-dark mb-0">
                             <i class="fas fa-bee" style="color: #d89c03; margin-right: 8px;"></i>
-                            Electra
+                            
                         </h3>
                     </div>
                     <p class="mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est. Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
@@ -739,18 +621,18 @@
             </div>
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
-                    <h4 class="text-dark mb-4">Honey Services</h4>
-                    <a href="#">Honey 1</a>
-                    <a href="#">Honey 2</a>
-                    <a href="#">Honey 3</a>
-                    <a href="#">Honey 4</a>
-                    <a href="#">Honey 5</a>
+                    <h4 class="text-dark mb-4">Honey services</h4>
+                    <a href="#">honey</a>
+                    <a href="#">honey</a>
+                    <a href="#">honey</a>
+                    <a href="#">honey</a>
+                    <a href="#">honey</a>
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
                     <h4 class="text-dark mb-4">Contact Info</h4>
-                    <a href="#"><i class="fa fa-map-marker-alt" style="color: #d89c03; margin-right: 8px;"></i>123 Street, Manjalumoodu</a>
+                    <a href="#"><i class="fa fa-map-marker-alt" style="color: #d89c03; margin-right: 8px;"></i>123 Street, manjalumoodu</a>
                     <a href="mailto:info@example.com"><i class="fas fa-envelope" style="color: #d89c03; margin-right: 8px;"></i>info@example.com</a>
                     <a href="tel:+01234567890"><i class="fas fa-phone" style="color: #d89c03; margin-right: 8px;"></i>+012 345 67890</a>
                     <a href="tel:+01234567890" class="mb-3"><i class="fas fa-print" style="color: #d89c03; margin-right: 8px;"></i>+012 345 67890</a>
@@ -803,32 +685,48 @@
             mobileMenu.classList.toggle('hidden');
         });
         </script>
-
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            function adjustCardStyles() {
-                const blogCards = document.querySelectorAll('.blog-card');
-                const viewportWidth = window.innerWidth;
-        
-                blogCards.forEach(card => {
-                    if (viewportWidth <= 480) { // For small screens
-                        card.style.width = '100%'; // Full width
-                        card.style.marginLeft = '0'; // Reset margin
-                    } else if (viewportWidth <= 768) { // For tablets
-                        card.style.width = '90%'; // Almost full width
-                        card.style.marginLeft = '0'; // Reset margin
-                    } else { // For larger screens
-                        card.style.width = '300px'; // Fixed width for larger screens
-                        card.style.marginLeft = '70px'; // Original margin
-                    }
-                });
+       
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                function adjustCardStyles() {
+                    const blogCards = document.querySelectorAll('.blog-card');
+                    const viewportWidth = window.innerWidth;
+            
+                    blogCards.forEach(card => {
+                        if (viewportWidth <= 480) { // For small screens
+                            card.style.marginLeft = '0';
+                            card.style.width = '100%'; // Full width
+                        } else if (viewportWidth <= 768) { // For tablets
+                            card.style.marginLeft = '0';
+                            card.style.width = '90%'; // Almost full width
+                        } else { // For larger screens
+                            card.style.marginLeft = '70px'; // Original margin
+                            card.style.width = '300px'; // Original width
+                        }
+                    });
+                }
+            
+                adjustCardStyles(); // Initial call
+                window.addEventListener('resize', adjustCardStyles); // Call on resize
+            });
+    
+            function toggleContent(cardNumber) {
+                const benefits = document.getElementById(`med-benefits-${cardNumber}`);
+                const benefitsText = document.getElementById(`med-benefits-text-${cardNumber}`);
+                
+                if (benefits.classList.contains('hidden')) {
+                    benefits.classList.remove('hidden');
+                    benefitsText.classList.remove('hidden');
+                } else {
+                    benefits.classList.add('hidden');
+                    benefitsText.classList.add('hidden');
+                }
             }
-        
-            adjustCardStyles(); // Initial call
-            window.addEventListener('resize', adjustCardStyles); // Call on resize
-        });
-        
-    </script>
+    
+            </script>
+    
+
+
 
 </body>
 </html>

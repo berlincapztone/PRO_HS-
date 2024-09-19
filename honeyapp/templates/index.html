@@ -246,8 +246,6 @@
             align-items: center;
             justify-content: center;
         }    
-      
-
         @keyframes arrowAnimation {
             0% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
@@ -256,10 +254,12 @@
         
         .arrow {
             display: inline-block;
-            font-size: 2rem;
+            font-size: 1.5rem; /* Adjusted for better mobile responsiveness */
             color: #FBBF24; /* Tailwind yellow-400 */
             animation: arrowAnimation 1s infinite;
         }
+         
+ 
         .blog-container {
             display: flex;
             flex-wrap: nowrap;
@@ -274,7 +274,7 @@
             border-radius: 0.5rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            height: 480px;
+            height: 493px;
             transition: transform 0.3s ease-in-out;
             width: 300px;
         }
@@ -364,6 +364,7 @@
                 width: 90%;
                 margin-left: 0;
                 margin-right: 0;
+                height:470px;
             }
         }
         
@@ -556,7 +557,7 @@
     
         .footer-item img {
             width: 50px;
-            height: auto;
+            height:auto;
         }
     
         .footer-item h3 {
@@ -578,18 +579,37 @@
 <!-- Pre-header Starts -->
 <div class="bg-yellow-300 py-2">
     <div class="container mx-auto flex flex-wrap justify-between items-center text-sm text-gray-600">
-        <div class="flex flex-wrap space-x-4 mb-2 md:mb-0">
-            <a href="#" class="flex items-center hover:text-gray-800"><i class="fa fa-envelope mr-2"></i> honey@gmail.com</a>
-            <a href="#" class="flex items-center hover:text-gray-800"><i class="fa fa-phone mr-2"></i> 1234567890</a>
+        <!-- Contact Information -->
+        <div class="flex flex-wrap space-x-4 items-center"> <!-- Removed mb-2 to ensure consistent alignment -->
+            <a href="#" class="flex items-center hover:text-gray-800">
+                <i class="fa fa-envelope mr-2 text-base"></i> <!-- Adjusted icon size and alignment -->
+                honey@gmail.com
+            </a>
+            <a href="#" class="flex items-center hover:text-gray-800">
+                <i class="fa fa-phone mr-2 text-base"></i> <!-- Adjusted icon size and alignment -->
+                1234567890
+            </a>
         </div>
-        <div class="flex flex-wrap space-x-4">
-            <a href="#" class="hover:text-gray-800"><i class="fa fa-facebook"></i></a>
-            <a href="#" class="hover:text-gray-800"><i class="fa fa-behance"></i></a>
-            <a href="#" class="hover:text-gray-800"><i class="fa fa-twitter"></i></a>
-            <a href="#" class="hover:text-gray-800"><i class="fa fa-dribbble"></i></a>
+
+        <!-- Social Media Icons -->
+        <div class="flex space-x-4 items-center"> <!-- Ensured consistent alignment -->
+            <a href="#" class="hover:text-gray-800">
+                <i class="fa fa-facebook text-lg"></i> <!-- Adjusted icon size and alignment -->
+            </a>
+            <a href="#" class="hover:text-gray-800">
+                <i class="fa fa-behance text-lg"></i> <!-- Adjusted icon size and alignment -->
+            </a>
+            <a href="#" class="hover:text-gray-800">
+                <i class="fa fa-twitter text-lg"></i> <!-- Adjusted icon size and alignment -->
+            </a>
+            <a href="#" class="hover:text-gray-800">
+                <i class="fa fa-dribbble text-lg"></i> <!-- Adjusted icon size and alignment -->
+            </a>
         </div>
     </div>
 </div>
+
+
 <!-- Pre-header End -->
 
 <!-- Header Area Start -->
@@ -632,14 +652,13 @@
 <!-- Header Area End -->
 
 
-
-<section class="relative overflow-hidden" style="margin-top: 5rem;"> <!-- Custom bottom margin -->
+<section class="relative overflow-hidden" style="margin-top:3rem;"> <!-- Custom top margin -->
     <div id="carousel" class="carousel">
         <div class="carousel-inner flex transition-transform duration-500">
             <!-- Slide 1 -->
             <div class="carousel-slide flex-shrink-0 w-full" style="background-image: url('{% static 'assets/images/' %}');">
                 <div class="content-wrapper flex flex-col md:flex-row items-center justify-between p-4 md:p-10 bg-yellow-100 bg-cover bg-center relative">
-                    <div class="text-left mb-4 md:mb-0 md:w-1/2 ml-4 md:ml-8 lg:ml-16">
+                    <div class="text-left mb-4 md:mb-0 md:w-1/2 ml-4 md:ml-8 lg:ml-16 pl-0 md:pl-12">
                         <h2 class="text-xl md:text-2xl lg:text-3xl text-yellow-600 uppercase mb-2 font-semibold">Pure Honey</h2>
                         <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 font-semibold">
                             From Hive to Home, <span class="text-yellow-700"></span><br>
@@ -652,14 +671,14 @@
                             <button class="bg-yellow-600 text-white px-4 py-2 rounded-full text-sm md:text-base">Shop Now</button>
                         </div>
                     </div>
-                    <img src="{% static 'assets/images/kisspng-organic-honey-honey-bee-nectar-mu0101nuka-honey-honey-5aa17ebb0fdeb1-2.png' %}" alt="Honey Image" class="object-contain rounded-lg w-full md:w-1/2 h-56 md:h-72 lg:h-96"/>
+                    <img src="{% static 'assets/images/kisspng-organic-honey-honey-bee-nectar-mu0101nuka-honey-honey-5aa17ebb0fdeb1-2.png' %}" alt="Honey Image" class="object-contain rounded-lg w-full md:w-1/2 h-40 md:h-56 lg:h-72"/>
                 </div>
             </div>
 
             <!-- Slide 2 -->
             <div class="carousel-slide flex-shrink-0 w-full" style="background-image: url('{% static 'assets/images/' %}');">
                 <div class="content-wrapper flex flex-col md:flex-row items-center justify-between p-4 md:p-10 bg-yellow-200 bg-cover bg-center relative">
-                    <div class="text-left mb-4 md:mb-0 md:w-1/2 ml-4 md:ml-8 lg:ml-16">
+                    <div class="text-left mb-4 md:mb-0 md:w-1/2 ml-4 md:ml-8 lg:ml-16 pl-0 md:pl-12">
                         <h2 class="text-xl md:text-2xl lg:text-3xl text-yellow-600 uppercase mb-2 font-semibold">Spices</h2>
                         <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 font-semibold">
                             A Little Bit Of <br><span class="text-yellow-500">Spices</span>
@@ -671,14 +690,14 @@
                             <button class="bg-yellow-600 text-white px-4 py-2 rounded-full text-sm md:text-base">Shop Now</button>
                         </div>
                     </div>
-                    <img src="{% static 'assets/images/Untitled-design-2021-10-05T223517.072-qq9dw0vzayz9obuo6i3njzvemqmob403airbzznlfk.webp' %}" alt="Spices Image" class="object-contain rounded-lg w-full md:w-1/2 h-56 md:h-72 lg:h-96"/>
+                    <img src="{% static 'assets/images/Untitled-design-2021-10-05T223517.072-qq9dw0vzayz9obuo6i3njzvemqmob403airbzznlfk.webp' %}" alt="Spices Image" class="object-contain rounded-lg w-full md:w-1/2 h-40 md:h-56 lg:h-72"/>
                 </div>
             </div>
 
             <!-- Slide 3 -->
             <div class="carousel-slide flex-shrink-0 w-full" style="background-image: url('{% static 'assets/images/' %}');">
                 <div class="content-wrapper flex flex-col md:flex-row items-center justify-between p-4 md:p-10 bg-yellow-300 bg-cover bg-center relative">
-                    <div class="text-left mb-4 md:mb-0 md:w-1/2 ml-4 md:ml-8 lg:ml-16">
+                    <div class="text-left mb-4 md:mb-0 md:w-1/2 ml-4 md:ml-8 lg:ml-16 pl-0 md:pl-12">
                         <h2 class="text-xl md:text-2xl lg:text-3xl text-yellow-600 uppercase mb-2 font-semibold">Coconuts</h2>
                         <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 font-semibold">
                             Coconuts <br>The tree <span class="text-yellow-500">of Life</span>
@@ -690,7 +709,7 @@
                             <button class="bg-yellow-600 text-white px-4 py-2 rounded-full text-sm md:text-base">Shop Now</button>
                         </div>
                     </div>
-                    <img src="{% static 'assets/images/240_F_706834166_Ue7EkhYTn50hWuSlevnXRrAFmneLb2rf.jpg' %}" alt="Coconut Image" class="object-contain rounded-lg w-full md:w-1/2 h-56 md:h-72 lg:h-96"/>
+                    <img src="{% static 'assets/images/240_F_706834166_Ue7EkhYTn50hWuSlevnXRrAFmneLb2rf.jpg' %}" alt="Coconut Image" class="object-contain rounded-lg w-full md:w-1/2 h-40 md:h-56 lg:h-72"/>
                 </div>
             </div>
         </div>
@@ -699,7 +718,12 @@
 
 
 
-<div class="container mx-auto p-8 pl-16"> <!-- Adjusted right padding here -->
+
+
+
+
+
+<div class="container mx-auto p-8 pl-12"> <!-- Adjusted right padding here -->
     <div class="flex flex-col md:flex-row items-center justify-between gap-8">
         <!-- Left Section: Text Content -->
         <div class="w-full md:w-1/3">
@@ -851,38 +875,38 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <!-- Step 1 -->
-            <div>
-                <img src="{% static 'assets/images/how-1.png' %}" alt="Flower Image" class="mx-auto mb-4">
-                <h2 class="text-yellow-600 font-semibold text-lg flex items-center justify-center">
-                    <span class="arrow mr-2 text-red-600 text-2xl">→</span>
-                    <span>Flowers produce nectar and attract our bees</span>
+            <div class="flex flex-col items-center">
+                <img src="{% static 'assets/images/how-1.png' %}" alt="Flower Image" class="mx-auto mb-4 max-w-xs h-auto">
+                <h2 class="text-yellow-600 font-semibold text-lg flex items-center justify-center mb-2 space-x-2">
+                    <span class="arrow text-red-600 text-xl">→</span>
+                    <span>Flowers attract bees with nectar produced</span>
                 </h2>
                 <p class="text-gray-600 font-semibold">Suspendisse mattis enim velit. Maecenas egestas mi auctor tortor imperdiet.</p>
             </div>
             <!-- Step 2 -->
-            <div>
-                <img src="{% static 'assets/images/how-2.png' %}" alt="Bees Collecting Nectar" class="mx-auto mb-4">
-                <h2 class="text-yellow-600 font-semibold text-lg flex items-center justify-center">
-                    <span class="arrow mr-2 text-red-600 text-2xl">→</span>
-                    <span>Bees collect the nectar and carry it to the beehive</span>
+            <div class="flex flex-col items-center">
+                <img src="{% static 'assets/images/how-2.png' %}" alt="Bees Collecting Nectar" class="mx-auto mb-4 max-w-xs h-auto">
+                <h2 class="text-yellow-600 font-semibold text-lg flex items-center justify-center mb-2 space-x-2">
+                    <span class="arrow text-red-600 text-xl">→</span>
+                    <span>Bees carry nectar  beehive for processing</span>
                 </h2>
                 <p class="text-gray-600 font-semibold">Suspendisse mattis enim velit. Maecenas egestas mi auctor tortor imperdiet.</p>
             </div>
             <!-- Step 3 -->
-            <div>
-                <img src="{% static 'assets/images/how-3.png' %}" alt="Beehive" class="mx-auto mb-4">
-                <h2 class="text-yellow-600 font-semibold text-lg flex items-center justify-center">
-                    <span class="arrow mr-2 text-red-600 text-2xl">→</span>
-                    <span>Bees seal cells with wax and honey ripens</span>
+            <div class="flex flex-col items-center">
+                <img src="{% static 'assets/images/how-3.png' %}" alt="Beehive" class="mx-auto mb-4 max-w-xs h-auto">
+                <h2 class="text-yellow-600 font-semibold text-lg flex items-center justify-center mb-2 space-x-2">
+                    <span class="arrow text-red-600 text-xl">→</span>
+                    <span>Cells sealed  wax, honey ripens  matures</span>
                 </h2>
                 <p class="text-gray-600 font-semibold">Suspendisse mattis enim velit. Maecenas egestas mi auctor tortor imperdiet.</p>
             </div>
             <!-- Step 4 -->
-            <div>
-                <img src="{% static 'assets/images/how-4.png' %}" alt="Honey Jar" class="mx-auto mb-4">
-                <h2 class="text-yellow-600 font-semibold text-lg flex items-center justify-center">
-                    <span class="arrow mr-2 text-red-600 text-2xl">→</span>
-                    <span>We collect the product and transfer it to the packaging</span>
+            <div class="flex flex-col items-center">
+                <img src="{% static 'assets/images/how-4.png' %}" alt="Honey Jar" class="mx-auto mb-4 max-w-xs h-auto">
+                <h2 class="text-yellow-600 font-semibold text-lg flex items-center justify-center mb-2 space-x-2">
+                    <span class="arrow text-red-600 text-xl">→</span>
+                    <span>Collect honey and transfer it to packaging</span>
                 </h2>
                 <p class="text-gray-600 font-semibold">Suspendisse mattis enim velit. Maecenas egestas mi auctor tortor imperdiet.</p>
             </div>
@@ -894,6 +918,9 @@
         </div>
     </div>
 </div>
+
+
+
 
 <!-- flow End -->
 
@@ -1155,7 +1182,7 @@
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column align-items-center">
                     <div class="d-flex align-items-center mb-4">
-                        <img src="{% static 'assets/images/true.jpg' %}" alt="Electra Logo" class="me-3">
+                        <img src="{% static 'assets/images/' %}" alt="" class="me-3">
                         <h3 class="text-dark mb-0">
                             <i class="fas fa-bee" style="color: #d89c03; margin-right: 8px;"></i>
                             
