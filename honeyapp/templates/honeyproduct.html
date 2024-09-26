@@ -385,7 +385,6 @@
     </div>
 </div>
 
-
 <section class="relative py-16 bg-cover bg-center" style="background-image: url('{% static "assets/images/background.jpg" %}');">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Single Wrapper Div for Content and Image -->
@@ -394,15 +393,22 @@
             <div class="flex flex-col lg:flex-row items-center w-full">
                 <!-- Content Div -->
                 <div class="text-left lg:w-1/2 lg:pr-8 mb-8 lg:mb-0 px-4 lg:px-0">
-                    <h2 class="text-3xl sm:text-4xl md:text-4xl font-semibold mb-4" style="color:#FFDD44 ">Beeswax & Candles: Nature's Craft</h2>
+                    <h2 class="text-3xl sm:text-4xl md:text-4xl font-semibold mb-4" style="color:#FFDD44">Beeswax & Candles: Nature's Craft</h2>
 
-                    <p class="text-Black-500 leading-relaxed text-sm md:text-base lg:font-medium mb-6 font-lighter"> Discover the natural beauty and warmth of beeswax candles, crafted from the finest beeswax derived from our sustainable honey production. Our candles burn longer and cleaner, filling your space with the subtle, sweet aroma of honey.</p>
+                    <p class="text-Black-500 leading-relaxed text-sm md:text-base lg:font-medium mb-6 font-lighter">
+                        Discover the natural beauty and warmth of beeswax candles, crafted from the finest beeswax derived from our sustainable honey production. Our candles burn longer and cleaner, filling your space with the subtle, sweet aroma of honey.
+                    </p>
+
+                    <!-- New paragraph for retail bulk candles and beeswax -->
+                    <p class="text-Black-500 leading-relaxed text-sm md:text-base lg:font-medium mb-6 font-lighter">
+                        We also offer retail and bulk options for our premium beeswax candles. Perfect for events, gifts, or personal use, our candles are available in various sizes and shapes, allowing you to experience the rich qualities of natural beeswax in your home or business. Enjoy the soft glow and delightful scent of our candles while supporting sustainable practices in our honey production.
+                    </p>
 
                     <button id="shopNowBtn" style="background-color: #FEE29B; color: #333; font-size: 0.875rem; font-weight: bold; padding: 0.5rem 1rem; border-radius: 9999px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); transition: background-color 0.3s ease;" 
     onmouseover="this.style.backgroundColor='#FDDC65'" 
     onmouseout="this.style.backgroundColor='#FEE29B'">
-    Shop Now
-</button>
+                        Shop Now
+                    </button>
 
                   
                     
@@ -410,7 +416,7 @@
                 </div>
                 <!-- Image Div -->
                 <div class="lg:w-1/2 flex justify-center items-center px-4">
-                    <img src="{% static "assets/images/fr.jpg" %}" alt="Beeswax Candles" class="w-full h-auto max-w-xs lg:max-w-sm object-cover rounded-lg shadow-lg">
+                    <img src="{% static "assets/images/what-are-bee-product.jpg" %}" alt="Beeswax Candles" class="w-full h-auto max-w-xs lg:max-w-sm object-cover rounded-lg shadow-lg">
                 </div>
             </div>
         </div>
@@ -419,7 +425,7 @@
 
 
 <div class="container mx-auto text-left mb-8 px-4">
-    <h1 class="text-3xl font-bold" style="color:#FFDD44">Our Beeswax & Candles Products</h1>
+    <h1 class="text-3xl font-bold" style="color:#FFDD44">HONEY PRODUCTS</h1>
 </div>
 
 <header class="bg-white py-8">
@@ -450,6 +456,33 @@
                 </div>
                 <img src="{% static "assets/images/c1.jpg" %}" alt="Candle Products" class="h-40 w-40 sm:h-48 sm:w-48 object-cover mt-4 sm:mt-0 rounded-lg transition-transform transform hover:scale-110">
             </div>
+
+            <div class="p-6 rounded-lg shadow-lg flex flex-col sm:flex-row items-center justify-between overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl"
+            style="background: linear-gradient(109.6deg, #F5E1A4 11.2%, #F9D77E 100.2%);">
+                <div class="flex flex-col justify-between h-full text-left sm:pr-8">
+                    <h2 class="text-xl sm:text-2xl font-semibold mb-4 mt-2 text-black">Bulk Honey</h2>
+                    <p class="mb-6 text-black text-sm sm:text-base">Our bulk honey offers consistent quality and flavor, perfect for large-scale needs.</p>
+                    <a href="{% url 'bulk_page' %}" style="background-color: #FEE29B; color: #333333;" class="rounded-full shadow-md transition-transform transform hover:scale-105 w-20 h-10 inline-block text-center flex items-center justify-center text-xs sm:text-sm">Shop Now</a>
+
+
+                </div>
+                <img src="{% static "assets/images/ber.png" %}" alt="Beeswax Products" class="h-40 w-40 sm:h-48 sm:w-48 object-cover mt-4 sm:mt-0 rounded-lg transition-transform transform hover:scale-110">
+            </div>
+            
+            <div class="p-6 rounded-lg shadow-lg flex flex-col sm:flex-row items-center justify-between overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl"
+            style="background: linear-gradient(109.6deg, #F5E1A4 11.2%, #F9D77E 100.2%);">
+                <div class="flex flex-col justify-between h-full text-left sm:pr-8">
+                    <h2 class="text-xl sm:text-2xl font-semibold mb-4 mt-2 text-black">Retail Honey</h2>
+                    <p class="mb-6 text-black text-sm sm:text-base">Our retail honey is packaged for individual sale, maintaining the highest standards of quality.</p>
+                    <a href="{% url 'retail_page' %}" style="background-color: #FEE29B; color: #333333;" class="rounded-full shadow-md transition-transform transform hover:scale-105 w-20 h-10 inline-block text-center flex items-center justify-center text-xs sm:text-sm">Shop Now</a>
+
+
+                </div>
+                <img src="{% static "assets/images/ber.png" %}" alt="Beeswax Products" class="h-40 w-40 sm:h-48 sm:w-48 object-cover mt-4 sm:mt-0 rounded-lg transition-transform transform hover:scale-110">
+            </div>
+            
+
+            
         </div>
     </div>
 </header>
