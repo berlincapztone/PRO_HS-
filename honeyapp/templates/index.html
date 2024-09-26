@@ -21,10 +21,17 @@
         <!-- Owl Carousel CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/2.3.4/assets/owl.carousel.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/2.3.4/assets/owl.theme.default.min.css">
-        
+
         <!-- FontAwesome CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         
+<!-- Slick CSS -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+<!-- Slick Theme (optional) -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+
         <!-- Additional CSS Files -->
         <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
         <link rel="stylesheet" href="{% static 'assets/css/animated.css' %}">
@@ -246,112 +253,78 @@
             align-items: center;
             justify-content: center;
         }    
-        @keyframes arrowAnimation {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0); }
-        }
-        
-        .arrow {
-            display: inline-block;
-            font-size: 1.5rem; /* Adjusted for better mobile responsiveness */
-            color: #FBBF24; /* Tailwind yellow-400 */
-            animation: arrowAnimation 1s infinite;
-        }
-         
- 
+    
         .blog-container {
             display: flex;
-            flex-wrap: nowrap;
-            gap: 1.5rem;
-            overflow-x: auto;
+            gap: 0;
             padding: 1rem;
+            justify-content: center;
         }
         
         .blog-card {
             flex: 0 0 auto;
             border: 2px solid #e5e7eb;
             border-radius: 0.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            height:473px;
+            height: 350px; /* Make the height auto to avoid forced scrolling */
+            max-width: 360px; /* Set max-width for better card size management */
             transition: transform 0.3s ease-in-out;
-            width:300px;
-        
+            background-color: #FFF7E1;
+            margin: 0 60px; /* Equal margin on left and right to prevent it from going inside */
+            overflow: hidden; /* Prevent content from overflowing */
         }
         
-        .blog-card:hover {
-            transform: scale(1.05);
-        }
+        
         
         .blog-card img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            height: 180px; /* Fixed height for image */
+            object-fit: cover; /* Ensure image is properly fit */
         }
         
         .blog-card-content {
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            padding: 1rem;
+            padding: 0.5rem;
         }
         
         .blog-card h2 {
-            margin-bottom: 0.5rem;
             font-size: 0.75rem;
             font-weight: 600;
-            text-transform: uppercase;
             color: #e77f3f;
         }
         
         .blog-card h1 {
-            margin-bottom: 0.5rem;
-            font-size: 1.25rem;
+            font-size: 0.9rem;
             font-weight: 700;
             color: #FFB81C;
         }
         
         .blog-card p {
-            margin-bottom: 0.5rem;
+            font-size: 0.75rem;
             color: #6b7280;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-        }
-        
-        .blog-card-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: auto;
-            font-size: 0.875rem;
-            color: #6b7280;
+            /* Remove unnecessary properties to prevent overflow */
         }
         
         .learn-more-btn {
-            display: inline-block;
-            margin-top:1rem;
-            padding: 0.5rem 1rem;
+            margin-top: 1.2rem;
+            padding: 0.3rem 0.6rem;
             background-color: #FFB81C;
             color: #ffffff;
-            font-size: 0.875rem;
+            font-size: 0.7rem;
             font-weight: 600;
             text-align: center;
             border-radius: 0.375rem;
-            transition: background-color 0.3s ease-in-out;
+            display: inline-block;
+            width: 80px;
             text-decoration: none;
-            
         }
         
         .learn-more-btn:hover {
             background-color: #e77f3f;
         }
         
+        /* Responsive Styles */
         @media (max-width: 1024px) {
             .blog-card {
-                width: 100%;
+                width: 220px;
             }
         }
         
@@ -363,23 +336,23 @@
         
             .blog-card {
                 width: 90%;
-                margin-left: 0;
-                margin-right: 0;
-                height:450px;
+                height: auto;
+                margin-bottom: 1rem;
             }
         }
         
         @media (max-width: 480px) {
             .learn-more-btn {
-                padding: 0.5rem 1rem;
-                font-size: 0.75rem;
-            
+                font-size: 0.6rem;
+                width: 70px;
+            }
+        
+            .blog-card {
+                width: 100%;
             }
         }
         
-        
     
-
         @keyframes slide {
             0% {
               transform: translateX(0);
@@ -874,53 +847,7 @@
 
 
 <!-- flow -->
-<div class="bg-white py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            <!-- Step 1 -->
-            <div class="flex flex-col items-center">
-                <img src="{% static 'assets/images/how-1.png' %}" alt="Flower Image" class="mx-auto mb-4 max-w-xs h-auto">
-                <h2 class="text-yellow-600 font-semibold text-lg flex items-center justify-center mb-2 space-x-2">
-                    <span class="arrow text-red-600 text-xl">→</span>
-                    <span>Flowers attract bees nectar produced</span>
-                </h2>
-                <p class="text-gray-600 font-semibold">Suspendisse mattis enim velit. Maecenas egestas mi auctor tortor imperdiet.</p>
-            </div>
-            <!-- Step 2 -->
-            <div class="flex flex-col items-center">
-                <img src="{% static 'assets/images/how-2.png' %}" alt="Bees Collecting Nectar" class="mx-auto mb-4 max-w-xs h-auto">
-                <h2 class="text-yellow-600 font-semibold text-lg flex items-center justify-center mb-2 space-x-2">
-                    <span class="arrow text-red-600 text-xl">→</span>
-                    <span>Bees carry nectar  beehive for processing</span>
-                </h2>
-                <p class="text-gray-600 font-semibold">Suspendisse mattis enim velit. Maecenas egestas mi auctor tortor imperdiet.</p>
-            </div>
-            <!-- Step 3 -->
-            <div class="flex flex-col items-center">
-                <img src="{% static 'assets/images/how-3.png' %}" alt="Beehive" class="mx-auto mb-4 max-w-xs h-auto">
-                <h2 class="text-yellow-600 font-semibold text-lg flex items-center justify-center mb-2 space-x-2">
-                    <span class="arrow text-red-600 text-xl">→</span>
-                    <span>Cells sealed  wax, honey ripens  matures</span>
-                </h2>
-                <p class="text-gray-600 font-semibold">Suspendisse mattis enim velit. Maecenas egestas mi auctor tortor imperdiet.</p>
-            </div>
-            <!-- Step 4 -->
-            <div class="flex flex-col items-center">
-                <img src="{% static 'assets/images/how-4.png' %}" alt="Honey Jar" class="mx-auto mb-4 max-w-xs h-auto">
-                <h2 class="text-yellow-600 font-semibold text-lg flex items-center justify-center mb-2 space-x-2">
-                    <span class="arrow text-red-600 text-xl">→</span>
-                    <span>Collect honey and transfer it to packaging</span>
-                </h2>
-                <p class="text-gray-600 font-semibold">Suspendisse mattis enim velit. Maecenas egestas mi auctor tortor imperdiet.</p>
-            </div>
-        </div>
-        <div class="mt-8 text-center">
-            <button class="bg-gradient-to-r from-yellow-600 via-yellow-500 to-red-600 text-white py-2 px-6 rounded-full hover:from-yellow-500 hover:via-yellow-400 hover:to-red-500 transition duration-300 ease-in-out">
-                Learn More
-            </button>
-        </div>
-    </div>
-</div>
+
 
 
 
@@ -929,51 +856,64 @@
 
 
 <section class="w-screen py-20">
-    <h1 class="mb-12 text-center font-sans text-5xl font-bold" style="color: #FFB81C;">Recent Article</h1>
+    <h1 class="mb-12 text-center font-sans text-5xl font-bold" style="color: #FFB81C;">Recent Articles</h1>
 
-    <div class="blog-container flex justify-center">
-
-        <article class="blog-card" style="margin-left:120px; background-color: #FFF7E1;">
+    <div class="blog-container blog-slider flex justify-center flex-wrap">
+        <article class="blog-card">
             <img src="{% static 'assets/images/blog1.jpg' %}" alt="blog" />
             <div class="blog-card-content p-6">
-                <h2 class="title-font font-semibold text-yellow-600">Cities</h2>
-                <h1 class="title-font font-semibold text-2xl text-yellow-800">This season, increased yield of honey</h1>
-                <p class="font-semibold text-yellow-700">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, maxime. Accusamus qui incidunt est rem at corrupti, earum fugiat iure.</p>
-                <div class="blog-card-footer flex justify-between items-center mt-4">
-                    <span class="font-semibold text-yellow-600"></span>
-                </div>
-                <a href="#" style="background-color: #FEE29B; color: #333333; padding: 6px 4px; font-size: 0.75rem; border-radius: 4px; display: inline-block; text-align: center; width: 100px;" class="font-semibold">Learn More</a>
+                <h2 class="font-semibold text-lg">Honey</h2> <!-- Small title -->
+                <h1 class="font-semibold text-2xl">This season, increased yield of honey</h1> <!-- Larger title -->
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, maxime.</p>
+                <a href="#" class="learn-more-btn">Learn More</a>
             </div>
         </article>
 
-        <article class="blog-card" style="margin-left:70px; background-color: #FFF7E1;">
+        <article class="blog-card">
             <img src="{% static 'assets/images/blog2.jpg' %}" alt="blog" />
             <div class="blog-card-content p-6">
-                <h2 class="title-font font-semibold text-yellow-600">Cities</h2>
-                <h1 class="title-font font-semibold text-2xl text-yellow-800">Our beekeepers begin to collect honey</h1>
-                <p class="font-semibold text-yellow-700">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, maxime. Accusamus qui incidunt est rem at corrupti, earum fugiat iure.</p>
-                <div class="blog-card-footer flex justify-between items-center mt-4">
-                    <span class="font-semibold text-yellow-600"></span>
-                </div>
-                <a href="#" style="background-color: #FEE29B; color: #333333; padding: 6px 4px; font-size: 0.75rem; border-radius: 4px; display: inline-block; text-align: center; width: 100px;" class="font-semibold">Learn More</a>
+                <h2 class="font-semibold text-lg">Coconut Oil</h2> <!-- Small title -->
+                <h1 class="font-semibold text-2xl">The benefits of using coconut oil in your diet</h1> <!-- Larger title -->
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, maxime.</p>
+                <a href="#" class="learn-more-btn">Learn More</a>
             </div>
         </article>
 
-        <article class="blog-card" style="margin-left:70px; background-color: #FFF7E1;">
-            <img src="{% static 'assets/images/blog3.jpg' %}" alt="blog" />
+        <article class="blog-card">
+            <img src="{% static 'assets/images/whole-spices-220x220.jpg' %}" alt="blog" />
             <div class="blog-card-content p-6">
-                <h2 class="title-font font-semibold text-yellow-600">Cities</h2>
-                <h1 class="title-font font-semibold text-2xl text-yellow-800">Definitions of honey naturalness</h1>
-                <p class="font-semibold text-yellow-700">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, maxime. Accusamus qui incidunt est rem at corrupti, earum fugiat iure.</p>
-                <div class="blog-card-footer flex justify-between items-center mt-4">
-                    <span class="font-semibold text-yellow-600"></span>
-                </div>
-                <a href="#" style="background-color: #FEE29B; color: #333333; padding: 6px 4px; font-size: 0.75rem; border-radius: 4px; display: inline-block; text-align: center; width: 100px;" class="font-semibold">Learn More</a>
+                <h2 class="font-semibold text-lg">Spices</h2> <!-- Small title -->
+                <h1 class="font-semibold text-2xl">Exploring the health benefits of various spices</h1> <!-- Larger title -->
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, maxime.</p>
+                <a href="#" class="learn-more-btn">Learn More</a>
             </div>
         </article>
 
+        <article class="blog-card">
+            <img src="{% static 'assets/images/blog4.jpg' %}" alt="blog" />
+            <div class="blog-card-content p-6">
+                <h2 class="font-semibold text-lg">Cities</h2> <!-- Small title -->
+                <h1 class="font-semibold text-2xl">New trends in beekeeping</h1> <!-- Larger title -->
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, maxime.</p>
+                <a href="#" class="learn-more-btn">Learn More</a>
+            </div>
+        </article>
+
+        <article class="blog-card">
+            <img src="{% static 'assets/images/blog5.jpg' %}" alt="blog" />
+            <div class="blog-card-content p-6">
+                <h2 class="font-semibold text-lg">Cities</h2> <!-- Small title -->
+                <h1 class="font-semibold text-2xl">Sustainable honey production practices</h1> <!-- Larger title -->
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, maxime.</p>
+                <a href="#" class="learn-more-btn">Learn More</a>
+            </div>
+        </article>
+        
     </div>
 </section>
+
+
+
 
 
 
@@ -1027,34 +967,7 @@
 <!-- End clients -->
 
 
-<section class="py-12">
-    <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-2xl font-semibold text-yellow-600">We Believe In</h2>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
-        <!-- Card 1 -->
-        <div class="text-center">
-            <img src="{% static 'assets/images/wood.jpg' %}" alt="Authenticity Icon" class="mx-auto mb-4 h-24">
-            <h3 class="text-xl font-semibold mb-2 text-yellow-600">AUTHENTICITY</h3>
-            <p class="text-gray-700 font-semibold">Bringing the purest form of food directly from the farms.</p>
-            <p class="text-gray-700 font-semibold">We ensure every product is as close to nature as possible.</p>
-        </div>
-        <!-- Card 2 -->
-        <div class="text-center">
-            <img src="{% static 'assets/images/butter.jpg' %}" alt="Tradition Icon" class="mx-auto mb-4 h-24">
-            <h3 class="text-xl font-semibold mb-2 text-yellow-600">TRADITION</h3>
-            <p class="text-gray-700 font-semibold">Harnessing age-old wisdom passed down by Grandmas.</p>
-            <p class="text-gray-700 font-semibold">We blend traditional methods with modern expertise.</p>
-        </div>
-        <!-- Card 3 -->
-        <div class="text-center">
-            <img src="{% static 'assets/images/istockphoto-638130734-612x612.jpg' %}" alt="Purpose Icon" class="mx-auto mb-4 h-24">
-            <h3 class="text-xl font-semibold mb-2 text-yellow-600">PURPOSE</h3>
-            <p class="text-gray-700 font-semibold">Empowering rural India with employment and fair trade.</p>
-            <p class="text-gray-700 font-semibold">Our mission is to uplift communities through ethical practices.</p>
-        </div>
-    </div>
-</section>
+
 
 
 
@@ -1218,6 +1131,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
   
   <script>
     $(document).ready(function(){
@@ -1321,29 +1236,42 @@ document.getElementById('menu-toggle').addEventListener('click', function() {
     mobileMenu.classList.toggle('hidden');
 });
 </script>
+
+
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    function adjustCardStyles() {
-        const blogCards = document.querySelectorAll('.blog-card');
-        const viewportWidth = window.innerWidth;
 
-        blogCards.forEach(card => {
-            if (viewportWidth <= 480) { // For small screens
-                card.style.marginLeft = '0';
-                card.style.width = '100%'; // Full width
-            } else if (viewportWidth <= 768) { // For tablets
-                card.style.marginLeft = '0';
-                card.style.width = '90%'; // Almost full width
-            } else { // For larger screens
-                card.style.marginLeft = '70px'; // Original margin
-                card.style.width = '300px'; // Original width
-            }
+    $(document).ready(function() {
+        $('.blog-slider').slick({
+            slidesToShow: 3, // 3 cards visible for large screens
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            dots: true,
+            arrows: false,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2 // 2 cards for tablet view
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1 // 1 card for mobile view
+                    }
+                },
+                {
+                    breakpoint: 480, // For smaller mobile devices
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
         });
-    }
-
-    adjustCardStyles(); // Initial call
-    window.addEventListener('resize', adjustCardStyles); // Call on resize
-});
+    });
+    
+    
 </script>
 
 
