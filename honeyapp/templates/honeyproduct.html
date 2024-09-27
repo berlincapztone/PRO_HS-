@@ -61,6 +61,11 @@
             filter: blur(8px); /* Adjust blur intensity */
             z-index: 0; /* Make sure the overlay is behind the content */
         }
+        
+        .fw-semibold {
+            font-weight: 600;
+        }
+        
 
         .footer .container {
             position: relative;
@@ -393,7 +398,7 @@
             <div class="flex flex-col lg:flex-row items-center w-full">
                 <!-- Content Div -->
                 <div class="text-left lg:w-1/2 lg:pr-8 mb-8 lg:mb-0 px-4 lg:px-0">
-                    <h2 class="text-3xl sm:text-4xl md:text-4xl font-semibold mb-4" style="color:#FFDD44">Beeswax & Candles: Nature's Craft</h2>
+                    <h2 class="text-3xl sm:text-4xl md:text-4xl font-semibold mb-4" style="color:#FFDD44">Beeswax & Candles & Bulk &Retail: Nature's Craft</h2>
 
                     <p class="text-Black-500 leading-relaxed text-sm md:text-base lg:font-medium mb-6 font-lighter">
                         Discover the natural beauty and warmth of beeswax candles, crafted from the finest beeswax derived from our sustainable honey production. Our candles burn longer and cleaner, filling your space with the subtle, sweet aroma of honey.
@@ -416,8 +421,10 @@
                 </div>
                 <!-- Image Div -->
                 <div class="lg:w-1/2 flex justify-center items-center px-4">
-                    <img src="{% static "assets/images/what-are-bee-product.jpg" %}" alt="Beeswax Candles" class="w-full h-auto max-w-xs lg:max-w-sm object-cover rounded-lg shadow-lg">
+                    <img src="{% static 'assets/images/what-are-bee-product.jpg' %}" alt="Beeswax Candles" class="w-full h-auto max-w-md lg:max-w-lg object-cover rounded-lg shadow-lg mr-9 lg:mr-10">
+
                 </div>
+                
             </div>
         </div>
     </div>
@@ -488,52 +495,6 @@
 </header>
 
 
-<section class="w-screen py-20">
-    <h1 class="mb-12 text-center font-sans text-5xl font-bold" style="color: #FFB81C;">Recent Article</h1>
-
-    <div class="blog-container flex justify-center">
-
-        <article class="blog-card" style="margin-left:120px; background-color: #FFF7E1;">
-            <img src="{% static 'assets/images/blog1.jpg' %}" alt="blog" />
-            <div class="blog-card-content p-6">
-                <h2 class="title-font font-semibold text-yellow-600">Cities</h2>
-                <h1 class="title-font font-semibold text-2xl text-yellow-800">This season, increased yield of honey</h1>
-                <p class="font-semibold text-yellow-700">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, maxime. Accusamus qui incidunt est rem at corrupti, earum fugiat iure.</p>
-                <div class="blog-card-footer flex justify-between items-center mt-4">
-                    <span class="font-semibold text-yellow-600"></span>
-                </div>
-                <a href="#" style="background-color: #FEE29B; color: #333333; padding: 6px 4px; font-size: 0.75rem; border-radius: 4px; display: inline-block; text-align: center; width: 100px;" class="font-semibold">Learn More</a>
-            </div>
-        </article>
-
-        <article class="blog-card" style="margin-left:70px; background-color: #FFF7E1;">
-            <img src="{% static 'assets/images/blog2.jpg' %}" alt="blog" />
-            <div class="blog-card-content p-6">
-                <h2 class="title-font font-semibold text-yellow-600">Cities</h2>
-                <h1 class="title-font font-semibold text-2xl text-yellow-800">Our beekeepers begin to collect honey</h1>
-                <p class="font-semibold text-yellow-700">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, maxime. Accusamus qui incidunt est rem at corrupti, earum fugiat iure.</p>
-                <div class="blog-card-footer flex justify-between items-center mt-4">
-                    <span class="font-semibold text-yellow-600"></span>
-                </div>
-                <a href="#" style="background-color: #FEE29B; color: #333333; padding: 6px 4px; font-size: 0.75rem; border-radius: 4px; display: inline-block; text-align: center; width: 100px;" class="font-semibold">Learn More</a>
-            </div>
-        </article>
-
-        <article class="blog-card" style="margin-left:70px; background-color: #FFF7E1;">
-            <img src="{% static 'assets/images/blog3.jpg' %}" alt="blog" />
-            <div class="blog-card-content p-6">
-                <h2 class="title-font font-semibold text-yellow-600">Cities</h2>
-                <h1 class="title-font font-semibold text-2xl text-yellow-800">Definitions of honey naturalness</h1>
-                <p class="font-semibold text-yellow-700">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, maxime. Accusamus qui incidunt est rem at corrupti, earum fugiat iure.</p>
-                <div class="blog-card-footer flex justify-between items-center mt-4">
-                    <span class="font-semibold text-yellow-600"></span>
-                </div>
-                <a href="#" style="background-color: #FEE29B; color: #333333; padding: 6px 4px; font-size: 0.75rem; border-radius: 4px; display: inline-block; text-align: center; width: 100px;" class="font-semibold">Learn More</a>
-            </div>
-        </article>
-
-    </div>
-</section>
 
 
 
@@ -587,12 +548,7 @@
 <div class="container-fluid footer bg-light py-5 wow fadeIn" data-wow-delay="0.2s">
     <div class="container py-5">
         <div class="row g-5 mb-5 align-items-center">
-            <div class="col-lg-7">
-                <div class="position-relative mx-auto">
-                    <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Email address">
-                    <button type="button" class="btn btn-primary position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Subscribe</button>
-                </div>
-            </div>
+            <div class="col-lg-7"></div>
             <div class="col-lg-5">
                 <div class="d-flex align-items-center justify-content-center justify-content-lg-end">
                     <a class="btn btn-light btn-md-square me-3" href="">
@@ -615,46 +571,53 @@
                 <div class="footer-item d-flex flex-column align-items-center">
                     <div class="d-flex align-items-center mb-4">
                         <img src="{% static 'assets/images/' %}" alt="" class="me-3">
-                        <h3 class="text-dark mb-0">
+                        <h3 class="text-dark mb-0 fw-semibold">
                             <i class="fas fa-bee" style="color: #d89c03; margin-right: 8px;"></i>
-                            
                         </h3>
                     </div>
-                    <p class="mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est. Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
+                    <p class="mb-3 fw-semibold">Dolor amet sit justo amet elitr clita ipsum elitr est. Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
-                    <h4 class="text-dark mb-4">Quick Links</h4>
-                    <a href="#">Home</a>
-                    <a href="#">About us</a>
-                    <a href="#">Service</a>
-                    <a href="#">Testimonial</a>
-                    <a href="#">Contact Us</a>
+                    <h4 class="text-dark mb-4 fw-semibold">Quick Links</h4>
+                    <a href="#" class="fw-semibold">Home</a>
+                    <a href="#" class="fw-semibold">Honey Product</a>
+                    <a href="#" class="fw-semibold">Coconut Product</a>
+                    <a href="#" class="fw-semibold">Oil</a>
+                    <a href="#" class="fw-semibold">Spices</a>
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
-                    <h4 class="text-dark mb-4">Honey services</h4>
-                    <a href="#">honey</a>
-                    <a href="#">honey</a>
-                    <a href="#">honey</a>
-                    <a href="#">honey</a>
-                    <a href="#">honey</a>
+                    <h4 class="text-dark mb-4 fw-semibold">Honey product</h4>
+                    <a href="#" class="fw-semibold">Beewax</a>
+                    <a href="#" class="fw-semibold">Candel</a>
+                    <a href="#" class="fw-semibold">Bulk</a>
+                    <a href="#" class="fw-semibold">Retail</a>
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
-                    <h4 class="text-dark mb-4">Contact Info</h4>
-                    <a href="#"><i class="fa fa-map-marker-alt" style="color: #d89c03; margin-right: 8px;"></i>123 Street, manjalumoodu</a>
-                    <a href="mailto:info@example.com"><i class="fas fa-envelope" style="color: #d89c03; margin-right: 8px;"></i>info@example.com</a>
-                    <a href="tel:+01234567890"><i class="fas fa-phone" style="color: #d89c03; margin-right: 8px;"></i>+012 345 67890</a>
-                    <a href="tel:+01234567890" class="mb-3"><i class="fas fa-print" style="color: #d89c03; margin-right: 8px;"></i>+012 345 67890</a>
+                    <h4 class="text-dark mb-4 fw-semibold">Contact Info</h4>
+                    <a href="#" class="fw-semibold">
+                        <i class="fa fa-map-marker-alt" style="color: #d89c03; margin-right: 8px;"></i>123 Street, manjalumoodu
+                    </a>
+                    <a href="mailto:info@example.com" class="fw-semibold">
+                        <i class="fas fa-envelope" style="color: #d89c03; margin-right: 8px;"></i>info@example.com
+                    </a>
+                    <a href="tel:+01234567890" class="fw-semibold">
+                        <i class="fas fa-phone" style="color: #d89c03; margin-right: 8px;"></i>+012 345 67890
+                    </a>
+                    <a href="tel:+01234567890" class="mb-3 fw-semibold">
+                        <i class="fas fa-print" style="color: #d89c03; margin-right: 8px;"></i>+012 345 67890
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
 <!-- Swiper JS -->
 

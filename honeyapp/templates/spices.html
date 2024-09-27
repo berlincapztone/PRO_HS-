@@ -44,7 +44,7 @@
 
         /*** Footer Start ***/
         .footer {
-            background:url('{% static "assets/images/footer.jpg" %}')no-repeat center center;
+            background:url('{% static "assets/images/different-spices-web-banner-with-copy-space-generative-ai-photo.jpg" %}')no-repeat center center;
             background-size: cover;
             position: relative;
             overflow: hidden;
@@ -261,37 +261,38 @@
 <body>
 
 <!-- Pre-header Starts -->
-<div class="bg-yellow-300 py-2">
-    <div class="container mx-auto flex flex-wrap justify-between items-center text-sm text-gray-600">
+<div class="py-2" style="background-color: #8B4513;"> <!-- Applied SaddleBrown background -->
+    <div class="container mx-auto flex flex-wrap justify-between items-center text-sm text-white"> <!-- Changed text color to white -->
         <!-- Contact Information -->
-        <div class="flex flex-wrap space-x-4 items-center"> <!-- Removed mb-2 to ensure consistent alignment -->
-            <a href="#" class="flex items-center hover:text-gray-800">
-                <i class="fa fa-envelope mr-2 text-base"></i> <!-- Adjusted icon size and alignment -->
+        <div class="flex flex-wrap space-x-4 items-center">
+            <a href="#" class="flex items-center hover:text-white"> <!-- Adjusted hover color to white -->
+                <i class="fa fa-envelope mr-2 text-base"></i>
                 honey@gmail.com
             </a>
-            <a href="#" class="flex items-center hover:text-gray-800">
-                <i class="fa fa-phone mr-2 text-base"></i> <!-- Adjusted icon size and alignment -->
+            <a href="#" class="flex items-center hover:text-white">
+                <i class="fa fa-phone mr-2 text-base"></i>
                 1234567890
             </a>
         </div>
 
         <!-- Social Media Icons -->
-        <div class="flex space-x-4 items-center"> <!-- Ensured consistent alignment -->
-            <a href="#" class="hover:text-gray-800">
-                <i class="fa fa-facebook text-lg"></i> <!-- Adjusted icon size and alignment -->
+        <div class="flex space-x-4 items-center">
+            <a href="#" class="hover:text-white">
+                <i class="fa fa-facebook text-lg"></i>
             </a>
-            <a href="#" class="hover:text-gray-800">
-                <i class="fa fa-behance text-lg"></i> <!-- Adjusted icon size and alignment -->
+            <a href="#" class="hover:text-white">
+                <i class="fa fa-behance text-lg"></i>
             </a>
-            <a href="#" class="hover:text-gray-800">
-                <i class="fa fa-twitter text-lg"></i> <!-- Adjusted icon size and alignment -->
+            <a href="#" class="hover:text-white">
+                <i class="fa fa-twitter text-lg"></i>
             </a>
-            <a href="#" class="hover:text-gray-800">
-                <i class="fa fa-dribbble text-lg"></i> <!-- Adjusted icon size and alignment -->
+            <a href="#" class="hover:text-white">
+                <i class="fa fa-dribbble text-lg"></i>
             </a>
         </div>
     </div>
 </div>
+
 <!-- Pre-header End -->
 
 <!-- Header Area Start -->
@@ -644,24 +645,21 @@
     <div class="container py-5">
         <div class="row g-5 mb-5 align-items-center">
             <div class="col-lg-7">
-                <div class="position-relative mx-auto">
-                    <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Email address">
-                    <button type="button" class="btn btn-primary position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Subscribe</button>
-                </div>
+             
             </div>
             <div class="col-lg-5">
                 <div class="d-flex align-items-center justify-content-center justify-content-lg-end">
                     <a class="btn btn-light btn-md-square me-3" href="">
-                        <i class="fab fa-facebook-f" style="color: #d89c03;"></i>
+                        <i class="fab fa-facebook-f" style="color:#8B4513; "></i>
                     </a>
                     <a class="btn btn-light btn-md-square me-3" href="">
-                        <i class="fab fa-twitter" style="color: #d89c03;"></i>
+                        <i class="fab fa-twitter" style="color:#8B4513; "></i>
                     </a>
                     <a class="btn btn-light btn-md-square me-3" href="">
-                        <i class="fab fa-instagram" style="color: #d89c03;"></i>
+                        <i class="fab fa-instagram" style="color:#8B4513; "></i>
                     </a>
                     <a class="btn btn-light btn-md-square me-0" href="">
-                        <i class="fab fa-linkedin-in" style="color: #d89c03;"></i>
+                        <i class="fab fa-linkedin-in" style="color:#8B4513; "></i>
                     </a>
                 </div>
             </div>
@@ -671,46 +669,46 @@
                 <div class="footer-item d-flex flex-column align-items-center">
                     <div class="d-flex align-items-center mb-4">
                         <img src="{% static 'assets/images/' %}" alt="" class="me-3">
-                        <h3 class="text-dark mb-0">
+                        <h3 class="text-dark mb-0 font-semibold">
                             <i class="fas fa-bee" style="color: #d89c03; margin-right: 8px;"></i>
-                            
                         </h3>
                     </div>
-                    <p class="mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est. Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
+                    <p class="mb-3 font-semibold">Dolor amet sit justo amet elitr clita ipsum elitr est. Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
-                    <h4 class="text-dark mb-4">Quick Links</h4>
-                    <a href="#">Home</a>
-                    <a href="#">About us</a>
-                    <a href="#">Service</a>
-                    <a href="#">Testimonial</a>
-                    <a href="#">Contact Us</a>
+                    <h4 class="text-dark mb-4 font-semibold">Quick Links</h4>
+                    <a href="#" class="font-semibold">Home</a>
+                    <a href="#" class="font-semibold">Honey Product</a>
+                    <a href="#" class="font-semibold">Coconut Product</a>
+                    <a href="#" class="font-semibold">Oil</a>
+                    <a href="#" class="font-semibold">Spices</a>
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
-                    <h4 class="text-dark mb-4">Honey services</h4>
-                    <a href="#">honey</a>
-                    <a href="#">honey</a>
-                    <a href="#">honey</a>
-                    <a href="#">honey</a>
-                    <a href="#">honey</a>
+                    <h4 class="text-dark mb-4 font-semibold">spices Product</h4>
+                    <a href="#" class="font-semibold">Tamarind</a>
+                    <a href="#" class="font-semibold">Cloves</a>
+                    <a href="#" class="font-semibold">Pepper</a>
+                    <a href="#" class="font-semibold">Nutmug</a>
+                    <a href="#" class="font-semibold"></a>
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
-                    <h4 class="text-dark mb-4">Contact Info</h4>
-                    <a href="#"><i class="fa fa-map-marker-alt" style="color: #d89c03; margin-right: 8px;"></i>123 Street, manjalumoodu</a>
-                    <a href="mailto:info@example.com"><i class="fas fa-envelope" style="color: #d89c03; margin-right: 8px;"></i>info@example.com</a>
-                    <a href="tel:+01234567890"><i class="fas fa-phone" style="color: #d89c03; margin-right: 8px;"></i>+012 345 67890</a>
-                    <a href="tel:+01234567890" class="mb-3"><i class="fas fa-print" style="color: #d89c03; margin-right: 8px;"></i>+012 345 67890</a>
+                    <h4 class="text-dark mb-4 font-semibold">Contact Info</h4>
+                    <a href="#" class="font-semibold"><i class="fa fa-map-marker-alt" style="color:#8B4513;  margin-right: 8px;"></i>123 Street, manjalumoodu</a>
+                    <a href="mailto:info@example.com" class="font-semibold"><i class="fas fa-envelope" style="color:#8B4513;  margin-right: 8px;"></i>info@example.com</a>
+                    <a href="tel:+01234567890" class="font-semibold"><i class="fas fa-phone" style="color:#8B4513;  margin-right: 8px;"></i>+012 345 67890</a>
+                    <a href="tel:+01234567890" class="font-semibold mb-3"><i class="fas fa-print" style="color: #8B4513; margin-right: 8px;"></i>+012 345 67890</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
 
 
