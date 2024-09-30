@@ -347,7 +347,7 @@
             max-width: 360px; /* Set max-width for better card size management */
             transition: transform 0.3s ease-in-out;
             background-color: #FFF7E1;
-            margin: 0 60px; /* Equal margin on left and right to prevent it from going inside */
+            margin: 0 70px; /* Equal margin on left and right to prevent it from going inside */
             overflow: hidden; /* Prevent content from overflowing */
         }
         
@@ -611,7 +611,7 @@
         }
     
         .footer-item img {
-            width: 50px;
+            width: 60px;
             height:auto;
         }
     
@@ -671,14 +671,16 @@
 <header class="bg-white shadow-md sticky top-0 z-40">
     <div class="container mx-auto flex flex-wrap items-center justify-between h-20 px-4">
         <a href="index.html" class="flex-shrink-0">
-            <img src="{% static 'assets/images/large.png' %}" alt="Honey Logo" width="100" height="100">
+            <img src="{% static 'assets/images/logo-removebg-preview.png' %}" alt="Honey Logo" width="75" height="50">
+
+
         </a>
         <button id="menu-toggle" class="navbar-toggler md:hidden flex items-center px-3 py-2 border rounded border-gray-600 text-gray-600 hover:text-gray-800 focus:outline-none">
             <i class="fa fa-bars"></i>
         </button>
         <ul class="hidden md:flex flex-1 justify-center space-x-6 text-yellow-800 font-semibold uppercase items-center">
             <li><a href="{% url 'landing_page' %}" class="hover:text-yellow-700">Home</a></li>
-            <li><a href="{% url 'honey_page' %}" class="hover:text-yellow-700">Honey</a></li>
+            
             <li><a href="{% url 'pro_page' %}" class="hover:text-yellow-700">Honey Product</a></li>
             <li><a href="{% url 'coc_page' %}" class="hover:text-yellow-700">Coconut Product</a></li>
             <li><a href="{% url 'oil_page' %}" class="hover:text-yellow-700">Oil</a></li>
@@ -696,7 +698,7 @@
     <div class="md:hidden hidden" id="mobile-menu">
         <ul class="flex flex-col space-y-2 bg-white text-yellow-800 font-semibold uppercase">
             <li><a href="{% url 'landing_page' %}" class="block px-4 py-2 hover:bg-yellow-100">Home</a></li>
-            <li><a href="{% url 'honey_page' %}" class="block px-4 py-2 hover:bg-yellow-100">Honey</a></li>
+           
             <li><a href="{% url 'pro_page' %}" class="block px-4 py-2 hover:bg-yellow-100">Honey Product</a></li>
             <li><a href="{% url 'coc_page' %}" class="block px-4 py-2 hover:bg-yellow-100">Coconut Product</a></li>
             <li><a href="{% url 'oil_page' %}" class="block px-4 py-2 hover:bg-yellow-100">Oil</a></li>
@@ -1135,11 +1137,12 @@
 </section>
 
     
+
 <div class="container-fluid footer bg-light py-5 wow fadeIn" data-wow-delay="0.2s">
     <div class="container py-5">
         <div class="row g-5 mb-5 align-items-center">
             <div class="col-lg-7">
-          
+                <!-- Left content, if any -->
             </div>
             <div class="col-lg-5">
                 <div class="d-flex align-items-center justify-content-center justify-content-lg-end">
@@ -1162,47 +1165,46 @@
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column align-items-center">
                     <div class="d-flex align-items-center mb-4">
-                        <img src="{% static 'assets/images/' %}" alt="" class="me-3">
-                        <h3 class="text-dark mb-0">
-                            <i class="fas fa-bee" style="color: #d89c03; margin-right: 8px;"></i>
-                            
+                        <img src="{% static 'assets/images/logo-removebg-preview.png' %}" alt="" class="me-3">
+                        <h3 class="text-dark font-semibold mb-0">
+                            <i class="fas fa-bee" style="color: #d89c03; margin-right: 8px;"></i> 
                         </h3>
                     </div>
-                    <p class="mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est. Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
+                    <p class="mb-3 font-semibold">Dolor amet sit justo amet elitr clita ipsum elitr est. Lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
-                    <h4 class="text-dark mb-4">Quick Links</h4>
-                    <a href="#">Home</a>
-                    <a href="#">Honey product</a>
-                    <a href="#">Coconut product</a>
-                    <a href="#">Oil</a>
-                    <a href="#">Spices</a>
+                    <h4 class="text-dark font-semibold mb-4">Quick Links</h4>
+                    <a href="#" class="font-semibold">Home</a>
+                    <a href="#" class="font-semibold">Honey product</a>
+                    <a href="#" class="font-semibold">Coconut product</a>
+                    <a href="#" class="font-semibold">Oil</a>
+                    <a href="#" class="font-semibold">Spices</a>
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
-                    <h4 class="text-dark mb-4">Our Product</h4>
-                    <a href="#">Honey product</a>
-                    <a href="#">coconut product</a>
-                    <a href="#">oil</a>
-                    <a href="#">spices</a>
-                    <a href="#"></a>
+                    <h4 class="text-dark font-semibold mb-4">Our Product</h4>
+                    <a href="#" class="font-semibold">Honey product</a>
+                    <a href="#" class="font-semibold">Coconut product</a>
+                    <a href="#" class="font-semibold">Oil</a>
+                    <a href="#" class="font-semibold">Spices</a>
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-xl-3">
                 <div class="footer-item d-flex flex-column">
-                    <h4 class="text-dark mb-4">Contact Info</h4>
-                    <a href="#"><i class="fa fa-map-marker-alt" style="color: #d89c03; margin-right: 8px;"></i>123 Street, manjalumoodu</a>
-                    <a href="mailto:info@example.com"><i class="fas fa-envelope" style="color: #d89c03; margin-right: 8px;"></i>info@example.com</a>
-                    <a href="tel:+01234567890"><i class="fas fa-phone" style="color: #d89c03; margin-right: 8px;"></i>+012 345 67890</a>
-                    <a href="tel:+01234567890" class="mb-3"><i class="fas fa-print" style="color: #d89c03; margin-right: 8px;"></i>+012 345 67890</a>
+                    <h4 class="text-dark font-semibold mb-4">Contact Info</h4>
+                    <a href="#" class="font-semibold"><i class="fa fa-map-marker-alt" style="color: #d89c03; margin-right: 8px;"></i>123 Street, Manjalumoodu</a>
+                    <a href="mailto:info@example.com" class="font-semibold"><i class="fas fa-envelope" style="color: #d89c03; margin-right: 8px;"></i>info@example.com</a>
+                    <a href="tel:+01234567890" class="font-semibold"><i class="fas fa-phone" style="color: #d89c03; margin-right: 8px;"></i>+012 345 67890</a>
+                    <a href="tel:+01234567890" class="font-semibold mb-3"><i class="fas fa-print" style="color: #d89c03; margin-right: 8px;"></i>+012 345 67890</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
 
 
